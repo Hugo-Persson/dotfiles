@@ -1,0 +1,79 @@
+let mapleader=" "
+Plug 'tpope/vim-surround'
+
+set which-key
+set easymotion
+set NERDTree
+
+set notimeout
+
+set scrolloff=10
+
+" Do incremental searching.
+set incsearch
+
+set timeoutlen=5000
+
+map <leader>e :NERDTreeFocus<CR>
+
+
+
+
+map <leader>o <Action>(FileStructurePopup)
+
+
+map <leader>gu <Action>(FindUsages)
+map <leader>gi <Action>(GotoImplementation)
+" LSP mappings
+nmap gi <Action>(GotoImplementation)
+nmap gr <Action>(FindUsages)
+
+nmap ]d <Action>(GotoNextError)
+nmap [d <Action>(GotoPreviousError)
+
+nmap [[ :action PreviousOccurence<cr> " TODO: this is not working
+nmap ]] :action NextOccurence<cr> " TODO: this is not working
+nmap [f :action MethodUp<cr>
+nmap ]f :action MethodDown<cr>
+nmap [g :action VcsShowPrevChangeMarker<cr> " TODO: this is not working
+nmap ]g :action VcsShowNextChangeMarker<cr> " TODO: this is not working
+
+map <leader>ra <Action>(RenameElement)
+map <leader>rr <Action>(Run)
+map <leader>rs :registers
+map <leader>t <Action>(ActivateTerminalToolWindow)
+map <leader>a <Action>(FileChooser.NewFile)
+map <leader>c "*y
+map <leader>p "*p
+map <leader>z <Action>(ToggleZenMode)
+map <leader>fw <Action>(FindInPath)
+map <leader>fa <Action>(SearchEverywhere)
+map <leader>fm <Action>(ReformatCode)
+map <leader>/ <Action>(CommentByBlockComment)
+
+
+map <leader>bv <Action>(Bookmarks)
+map <leader>bc <Action>(BookmarksView.Create)
+
+imap <Tab> <Action>(EditorIndentLineOrSelection)
+imap <S-Tab> <Action>(EditorUnindentSelection)
+
+nmap <Tab> <Action>(GotoNextTab)
+nmap <S-Tab> <action>(PreviousTab)
+nmap <Tab> <action>(NextTab)
+nmap <S-e> <action>(ShowErrorDescription)
+nmap <S-k> <action>(ShowHoverInfo)
+nmap <leader>p _dP " Pastes but stores deleted text
+nmap <leader>x <Action>(CloseActiveTab)
+
+
+nmap <S-CR> <Action>(Run)
+
+
+
+nmap <leader>cca <Action>(CollapseAll)
+
+map gc <Action>(CommentByBlockComment)
+
+" built in search looks better
+" nnoremap / :action Find<cr>

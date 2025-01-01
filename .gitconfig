@@ -1,0 +1,38 @@
+[user]
+	email = hugo.e.persson@gmail.com
+  name = Hugo Persson
+[include]
+  path = /Users/hugo/dotfiles/delta/catppuccin.gitconfig
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[push]
+	autoSetupRemote = true
+[pull]
+  rebase = false
+
+[core]
+  pager = delta
+  editor = nvim
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+	features = line-numbers decorations catppuccin-latte
+	navigate = true
+  whitespace-error-style = 22 reverse
+[delta "decorations"]
+	commit-decoration-style = bold yellow box ul
+	file-style = bold yellow ul
+	file-decoration-style = none
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+[init]
+	defaultBranch = main
