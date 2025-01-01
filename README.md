@@ -11,7 +11,7 @@ This is simple setup for my terminal. All config files for setting up terminal t
 brew install yadm
 
 #  Clone repo
-yadm clone git@github.com:Hugo-Persson/terminal-config.git
+yadm clone git@github.com:Hugo-Persson/dotfiles.git
 ```
 
 # Dotfile management
