@@ -12,7 +12,6 @@
 !scripts/
 
 !.config
-!.hammerspoon/
 !dotfile-management/
 !.ssh
 !secrets/
