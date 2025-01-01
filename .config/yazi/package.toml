@@ -1,0 +1,5 @@
+[plugin]
+deps = []
+
+[flavor]
+deps = [{ use = "yazi-rs/flavors#catppuccin-mocha", commit = "2d7dd2a" }, { use = "yazi-rs/flavors#catppuccin-latte", commit = "2d7dd2a" }]
