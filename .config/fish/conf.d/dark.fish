@@ -1,3 +1,8 @@
+
+if test (uname) = Linux
+    exit 0
+end
+
 function getOutputStr
     if [ "$(uname)" = Linux ]
         if test -e /home/hugo/last-ssh-connection-theme
