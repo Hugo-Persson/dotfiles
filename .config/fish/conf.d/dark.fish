@@ -1,7 +1,4 @@
 
-if test (uname) = Linux
-    exit 0
-end
 
 function getOutputStr
     if [ "$(uname)" = Linux ]
@@ -84,6 +81,9 @@ function glow
 end
 
 
+if test (uname) = Linux
+    exit 0
+end
 function evalTmuxTheme
     echo "set -g @catppuccin_flavor \"$(getTmuxTheme)\"" >~/.config/tmux/tmux.conf.theme
 end
