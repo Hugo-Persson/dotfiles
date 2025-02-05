@@ -50,9 +50,10 @@
   security.pam.enableSudoTouchIdAuth = true;
   system.defaults.NSGlobalDomain.AppleShowAllExtensions=true;
    # 120, 90, 60, 30, 12, 6, 2
-  system.defaults.NSGlobalDomain.InitialKeyRepeat = 2;
+  system.defaults.NSGlobalDomain.InitialKeyRepeat = 6;
   system.defaults.finder.ShowPathbar = true;
   system.defaults.finder.ShowStatusBar = true;
+  system.defaults.WindowManager.EnableStandardClickToShowDesktop = false;
   # Whether to automatically rearrange spaces based on most recent use. The default is true.
 
   system.defaults.CustomUserPreferences = {
