@@ -1,4 +1,8 @@
 alias vim="ANTHROPIC_API_KEY=$(cat ~/secrets/anthropic-token) nvim"
+function neovide
+    set -x ANTHROPIC_API_KEY (cat ~/secrets/anthropic-token)
+    command neovide --frame buttonless --title-hidden
+end
 alias template="template.sh"
 alias ld="lazydocker"
 abbr ssh_pub "cat ~/.ssh/id_rsa.pub | pbcopy"
