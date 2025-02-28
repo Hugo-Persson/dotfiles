@@ -8,10 +8,10 @@ function brew
         case install
             echo "Running post-install command..."
             # Add your shell commands here, e.g.:
-            ~/dotfile-management/dump-brew.sh
+            ~/dotfile-management/sync/dump-brew.sh
         case uninstall
             echo "Running post-uninstall command..."
-            ~/dotfile-management/dump-brew.sh
+            ~/dotfile-management/sync/dump-brew.sh
         case "*"
             # Do nothing for other subcommands
     end
