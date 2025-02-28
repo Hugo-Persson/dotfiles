@@ -33,7 +33,8 @@ local config = {
   font_size = 12,
 
   line_height = 1.1,
-  font = wezterm.font("JetBrains Mono"),
+  font = wezterm.font_with_fallback({ "JetBrains Mono", "JetBrainsMono Nerd Font Mono" }),
+  --font = wezterm.font("JetBrainsMono Nerd Font Mono"),
 
   color_scheme = cs.get_color_scheme(),
 
@@ -65,7 +66,6 @@ local config = {
   keys = {
     k.cmd_key(".", k.multiple_actions(":ZenMode")),
     -- k.cmd_key("H", act.SendKey({ mods = "CTRL", key = "h" })),
-    k.cmd_key("i", k.multiple_actions(":SmartGoTo")),
     -- k.cmd_key("J", act.SendKey({ mods = "CTRL", key = "j" })),
     -- k.cmd_key("K", act.SendKey({ mods = "CTRL", key = "k" })),
     -- k.cmd_key("K", act.SendKey({ mods = "CTRL", key = "k" })),
@@ -107,6 +107,9 @@ local config = {
     k.cmd_to_tmux_prefix("d", "d"),
     k.cmd_to_tmux_prefix("u", "u"),
     k.cmd_to_tmux_prefix("h", "h"),
+
+    -- floax
+    k.cmd_to_tmux_prefix("i", "p"),
 
     k.cmd_key("v", act.PasteFrom("Clipboard")),
     k.cmd_key(
