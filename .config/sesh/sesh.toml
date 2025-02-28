@@ -1,4 +1,6 @@
 # open the file manager
+
+blacklist = ["scratch"]
 [[session]]
 name = "Downloads 📥"
 path = "~/Downloads"
