@@ -16,3 +16,21 @@ function docker_fix()
 end
 
 vim.cmd([[au BufRead * lua docker_fix()]])
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.jrag",
+  command = "setfiletype java",
+})
+if vim.g.neovide then
+  vim.keymap.set("n", "<D-s>", ":w<CR>") -- Save
+  vim.keymap.set("v", "<D-c>", '"+y') -- Copy
+  vim.keymap.set("n", "<D-v>", '"+P') -- Paste normal mode
+  vim.keymap.set("v", "<D-v>", '"+P') -- Paste visual mode
+  vim.keymap.set("c", "<D-v>", "<C-R>+") -- Paste command mode
+  vim.keymap.set("i", "<D-v>", '<ESC>l"+Pli') -- Paste insert mode
+
+  vim.g.neovide_padding_top = 10
+  vim.g.neovide_padding_bottom = 0
+  vim.g.neovide_padding_right = 10
+  vim.g.neovide_padding_left = 10
+  vim.g.neovide_refresh_rate = 144
+end

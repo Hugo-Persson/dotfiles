@@ -8,10 +8,9 @@ function GetTheme()
   return theme
 end
 
+
 function SetTheme()
-  if vim.fn.has("mac") == 0 then
-    vim.go.background = GetTheme()
-  end
+  vim.go.background = GetTheme()
 end
 -- Strip trailing newline characters from the output
 -- Set theme from the shell command output if not on mac

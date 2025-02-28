@@ -26,3 +26,4 @@ self-hosted
 Self-Hosting
 MiniBeaconPlus
 Cost-effectiveness
+trigram

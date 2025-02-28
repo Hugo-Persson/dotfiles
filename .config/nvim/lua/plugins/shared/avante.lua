@@ -3,13 +3,30 @@ return {
     "yetone/avante.nvim",
     event = "VeryLazy",
     lazy = false,
+    config = function()
+      vim.notify("Avante loaded")
+    end,
+    build = "make",
     version = false, -- set this if you want to always pull the latest change
     opts = {
+      vendors = {
+        provider = "deepseek local",
+        vendors = {
+          deepseek = {
+            __inherited_from = "openai",
+            api_key_name = "DEEPSEEK_API_KEY",
+            endpoint = "http://localhost:1234",
+            -- model = "deepseek-coder",
+            model = "deepseek-r1-distill-qwen-7b",
+          },
+        },
+      },
       -- add any opts here
     },
     --opts = { provider = "copilot" },
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
+      "catppuccin/nvim",
       "stevearc/dressing.nvim",
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
