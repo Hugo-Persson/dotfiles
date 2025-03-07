@@ -8,7 +8,6 @@ function GetTheme()
   return theme
 end
 
-
 function SetTheme()
   vim.go.background = GetTheme()
 end
@@ -16,5 +15,15 @@ end
 -- Set theme from the shell command output if not on mac
 SetTheme()
 vim.api.nvim_create_user_command("SetTheme", SetTheme, {})
+
 vim.api.nvim_set_hl(0, "DiffText", { fg = "#ffffff", bg = "#7d3b40" })
 vim.api.nvim_set_hl(0, "DiffAdd", { fg = "#ffffff", bg = "#1d3450" })
+
+function GetColorScheme()
+  local theme = GetTheme()
+  if theme == "dark" then
+    return require("catppuccin.palettes").get_palette("mocha")
+  else
+    return require("catppuccin.palettes").get_palette("latte")
+  end
+end
