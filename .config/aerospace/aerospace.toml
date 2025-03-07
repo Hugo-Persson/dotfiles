@@ -221,4 +221,12 @@ run = "layout floating"
 if.app-id = "com.godspeedapp.Godspeed-setapp"
 run = "layout floating"
 
+[[on-window-detected]]
+if.app-id = "com.riotgames.RiotGames.RiotClient"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.riotgames.LeagueofLegends.LeagueClientUx"
+run = "layout floating"
+# communication, C
 # communication, C
