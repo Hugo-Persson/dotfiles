@@ -2,7 +2,7 @@
 yadm decrypt
 brew install gum
 
-PROFILE=$(~/dotfile-management/set-profile.sh)
+PROFILE=$(~/scripts/set-profile.sh)
 
 ~/dotfile-management/sync/sync.sh
 ~/dotfile-management/setup/shared.sh
