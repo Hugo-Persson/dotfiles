@@ -14,4 +14,4 @@ elif [ "$PROFILE" = "Server" ]; then
 fi
 BREWFILE_PATH="$HOME/dotfile-management/sync/$FILE"
 echo "Installing from $BREWFILE_PATH"
-brew bundle --file "$BREWFILE_PATH"
+brew bundle --file "$BREWFILE_PATH" --cleanup
