@@ -4,7 +4,17 @@ This is simple setup for my terminal. All config files for setting up terminal t
 
 # Quickstart
 
+Run:
+
+```shell
+curl -s https://raw.githubusercontent.com/Hugo-Persson/dotfiles/refs/heads/main/easy-setup.sh | bash
+```
+
 ```sh
+# Ensure CURL intalled, if not install it
+# For debian:
+#sudo apt install curl
+
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # Install YADM
@@ -15,6 +25,7 @@ yadm clone git@github.com:Hugo-Persson/dotfiles.git
 ```
 
 # Dotfile management
+
 `ly` to open lazygit for dotfiles
 
 Use negated .gitignore files for directories that should be tracked then `yadm add <file>`
