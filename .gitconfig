@@ -2,7 +2,7 @@
 	email = hugo.e.persson@gmail.com
   name = Hugo Persson
 [include]
-  path = /Users/hugo/dotfiles/delta/catppuccin.gitconfig
+  path = /Users/hugo/delta/catppuccin.gitconfig
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
