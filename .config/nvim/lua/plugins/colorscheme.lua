@@ -25,7 +25,10 @@ return {
     priority = 1000,
     config = function()
       vim.notify("Catppuccin loaded")
-      require("dark_notify").run()
+      local status_ok, dark_notify = pcall(require, "dark_notify")
+      if status_ok then
+        dark_notify.run()
+      end
 
       local scheme = GetColorScheme()
       local base = scheme.base
