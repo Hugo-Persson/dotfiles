@@ -20,6 +20,7 @@
     autohide = true;
     autohide-delay = 0.0;
     mru-spaces = false;
+    show-recents = false;
     expose-group-apps = true;
     tilesize = 32;
   };
@@ -49,8 +50,9 @@
   # '';
   security.pam.enableSudoTouchIdAuth = true;
   system.defaults.NSGlobalDomain.AppleShowAllExtensions=true;
+  system.defaults.NSGlobalDomain.AppleEnableMouseSwipeNavigateWithScrolls=true;
    # 120, 90, 60, 30, 12, 6, 2
-  system.defaults.NSGlobalDomain.InitialKeyRepeat = 6;
+  system.defaults.NSGlobalDomain.InitialKeyRepeat = 12;
   system.defaults.finder.ShowPathbar = true;
   system.defaults.finder.ShowStatusBar = true;
   system.defaults.WindowManager.EnableStandardClickToShowDesktop = false;
