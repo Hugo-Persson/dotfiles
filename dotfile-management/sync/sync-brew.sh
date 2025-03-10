@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PROFILE=$(get-profile.sh)
+PROFILE=$(~/scripts/get-profile.sh)
 echo "Installing homebrew formulas..."
 
 if [[ $(PROFILE) == "Dev" ]]; then
