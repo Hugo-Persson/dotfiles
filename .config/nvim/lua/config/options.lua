@@ -5,6 +5,9 @@
 function GetTheme()
   local theme = vim.fn.system("getTheme")
   theme = string.gsub(theme, "\n", "")
+  if theme ~= "dark" and theme ~= "light" then
+    theme = "dark"
+  end
   return theme
 end
 
