@@ -3,7 +3,7 @@
 PROFILE=$(~/scripts/get-profile.sh)
 echo "Installing homebrew formulas..."
 
-if [[ $(PROFILE) == "Dev" ]]; then
+if [[ "$PROFILE" == "Dev" ]]; then
   echo "On mac"
   FILE="Brewfile-dev"
 elif [ "$PROFILE" = "Server" ]; then
