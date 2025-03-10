@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 echo "Setting shell to fish..."
 if ! grep -q "/home/linuxbrew/.linuxbrew/bin/fish" /etc/shells; then
   echo "/opt/homebrew/bin/fish" | sudo tee -a /etc/shells
