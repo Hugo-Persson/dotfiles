@@ -1,10 +1,8 @@
-
-
 function getOutputStr
     if [ "$(uname)" = Linux ]
         if test -e /home/hugo/last-ssh-connection-theme
-            set output $(cat ~/last-ssh-connection-theme)
-            echo $output
+            cat ~/last-ssh-connection-theme
+
         else
             echo dark
         end
@@ -67,7 +65,6 @@ function cat
     end
 end
 
-
 function getGlowStyle
     if [ "$(isDarkMode)" -eq 1 ]
         echo "~/dotfile-management/glamour-themes/catppuccin-mocha.json"
@@ -75,11 +72,10 @@ function getGlowStyle
         echo "~/dotfile-management/glamour-themes/catppuccin-latte.json"
     end
 end
-function glow
-    set STYLE "$(getGlowStyle)"
-    command glow -s $(getGlowStyle) $argv
-end
-
+# function glow
+#     set STYLE "$(getGlowStyle)"
+#     command glow -s $(getGlowStyle) $argv
+# end
 
 if test (uname) = Linux
     exit 0
