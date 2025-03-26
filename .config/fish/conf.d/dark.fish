@@ -1,7 +1,7 @@
 function getOutputStr
     if [ "$(uname)" = Linux ]
         if test -e /home/hugo/last-ssh-connection-theme
-            cat ~/last-ssh-connection-theme
+            command cat ~/last-ssh-connection-theme
 
         else
             echo dark
