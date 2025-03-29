@@ -85,7 +85,7 @@ if test (uname) = Linux
     exit 0
 end
 function evalTmuxTheme
-    echo "source-file $HOME/.config/tmux/catppuccin-$(getTmuxTheme).conf" >~/.config/tmux/tmux.conf.theme
+    echo "source $HOME/.config/tmux/catppuccin-$(getTmuxTheme).conf" >~/.config/tmux/tmux.conf.theme
 end
 
 if [ "$(isDarkMode)" -eq 1 ]
