@@ -81,9 +81,6 @@ end
 #     command glow -s $(getGlowStyle) $argv
 # end
 
-if test (uname) = Linux
-    exit 0
-end
 function evalTmuxTheme
     echo "source $HOME/.config/tmux/catppuccin-$(getTmuxTheme).conf" >~/.config/tmux/tmux.conf.theme
 end
