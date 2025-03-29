@@ -39,6 +39,10 @@ function getTmuxTheme
     end
 end
 
+function set_tmux_theme
+
+    set -Ux TMUX_THEME "$(getTmuxTheme)"
+end
 function gum
     echo "running gum"
     command gum $argv
@@ -81,7 +85,7 @@ if test (uname) = Linux
     exit 0
 end
 function evalTmuxTheme
-    echo "set -g @catppuccin_flavor \"$(getTmuxTheme)\"" >~/.config/tmux/tmux.conf.theme
+    echo "source-file $HOME/.config/tmux/catppuccin-$(getTmuxTheme).conf" >~/.config/tmux/tmux.conf.theme
 end
 
 if [ "$(isDarkMode)" -eq 1 ]
@@ -90,5 +94,4 @@ else
     git config --global delta.features "line-numbers decorations catppuccin-latte"
 end
 
-#set -x TMUX_THEME $(getTmuxTheme)
 evalTmuxTheme
