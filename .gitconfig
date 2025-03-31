@@ -36,3 +36,7 @@
     colorMoved = default
 [init]
 	defaultBranch = main
+[submodule]
+	recurse = true
+[fetch]
+	recurseSubmodules = on-demand
