@@ -1,5 +1,10 @@
 #alias vim="ANTHROPIC_API_KEY=$(cat ~/secrets/anthropic-token) nvim"
-alias vim="DEEPSEEK_API_KEY=$(cat ~/secrets/deepseek-token) ANTHROPIC_API_KEY=$(cat ~/secrets/anthropic-token) nvim"
+set -gx LDFLAGS -L/opt/homebrew/opt/curl/lib
+set -gx CPPFLAGS -I/opt/homebrew/opt/curl/include
+set -gx PKG_CONFIG_PATH /opt/homebrew/opt/curl/lib/pkgconfig
+
+alias vim="source ~/secrets/nvim.env && nvim"
+#alias vim="DEEPSEEK_API_KEY=$(cat ~/secrets/deepseek-token) ANTHROPIC_API_KEY=$(cat ~/secrets/anthropic-token) nvim"
 function neovide
     set -x ANTHROPIC_API_KEY (cat ~/secrets/anthropic-token)
     command neovide --frame buttonless --title-hidden
