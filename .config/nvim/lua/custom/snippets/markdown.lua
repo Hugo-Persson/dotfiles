@@ -1,4 +1,3 @@
-vim.notify("Markdown snippets loaded", 2)
 local ls = require("luasnip")
 -- some shorthands...
 local s = ls.snippet

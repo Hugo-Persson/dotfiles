@@ -9,6 +9,7 @@ return {
     opts = {
       linters_by_ft = {
         swift = { "swiftlint" },
+        markdown = { "markdownlint-cli2" },
       },
       linters = linters,
     },
