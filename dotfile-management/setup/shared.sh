@@ -17,3 +17,5 @@ omf install https://github.com/jhillyerd/plugin-git
 npm install -g @microsoft/compose-language-service
 
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+
+gh extension install github/gh-copilot
