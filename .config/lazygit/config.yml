@@ -24,6 +24,11 @@ git:
     colorArg: always
     pager: delta --dark --paging=never
 customCommands:
+  - key: <c-a>
+    description: Pick AI commit
+    command: ~/scripts/ai-commit.sh
+    context: files
+    subprocess: true
   - key: "<c-s>"
     description: "Accept their changes in merge conflict"
     command: "git checkout --theirs -- {{.SelectedFile.Name | quote}} "
