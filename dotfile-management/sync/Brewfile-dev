@@ -7,6 +7,8 @@ tap "infisical/get-cli"
 tap "louisbrunner/valgrind"
 tap "mongodb/brew"
 tap "nikitabobko/tap"
+tap "tuist/tuist"
+brew "aichat"
 brew "openssl@3"
 brew "python@3.12"
 brew "awscli"
@@ -68,6 +70,7 @@ brew "getsentry/tools/sentry-wizard"
 brew "hugo-persson/dns-cli-tools/dns-cli-tools"
 brew "infisical/get-cli/infisical"
 brew "mongodb/brew/mongodb-database-tools"
+brew "tuist/tuist/tuist@4.46.1"
 cask "1password"
 cask "aerospace"
 cask "arc"
@@ -122,7 +125,6 @@ mas "InjectionIII", id: 1380446739
 mas "Linearity Curve", id: 1219074514
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Pure Paste", id: 1611378436
 mas "Unsplash Wallpapers", id: 1284863847
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
