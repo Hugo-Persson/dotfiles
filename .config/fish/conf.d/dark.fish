@@ -87,8 +87,11 @@ end
 
 if [ "$(isDarkMode)" -eq 1 ]
     git config --global delta.features "line-numbers decorations catppuccin-mocha"
+    export AICHAT_LIGHT_THEME=false
+
 else
     git config --global delta.features "line-numbers decorations catppuccin-latte"
+    export AICHAT_LIGHT_THEME=true
 end
 
 evalTmuxTheme
