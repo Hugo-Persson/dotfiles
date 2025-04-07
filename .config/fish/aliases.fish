@@ -25,7 +25,7 @@ alias backup="~/terminal-config/backup/backup.sh"
 alias my_gcc="gcc -Werror -Wfloat-equal -Wextra -Wundef -std=c18 -g -Os -funsigned-char -fsanitize=address -fsanitize=undefined -ftrapv "
 alias pedantic_gcc="gcc Werror -Wfloat-equal -Wextra -Wall -Wundef -std=c11 -g -Os  -funsigned-char -fsanitize=address -fsanitize=undefined -ftrapv -fno-omit-frame-pointer -ansi -pedantic"
 abbr my_g++ "g++ -c -O2 -Wall -Wextra -pedantic-errors -Wold-style-cast -std=c++11 -Werror"
-alias ly "lazygit -ucd ~/.local/share/yadm/lazygit -w ~ -g ~/.local/share/yadm/repo.git"
+alias ly "lazygit -w ~ -g ~/.local/share/yadm/repo.git"
 
 abbr - "cd -"
 abbr md "mv ~/Downloads/"
