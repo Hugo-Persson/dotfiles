@@ -17,6 +17,7 @@ fi
 
 if ! command -v omf &>/dev/null; then
   echo "OMF not installed, installing"
+  rm -rf ~/.local/share/omf
   curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 fi
 
