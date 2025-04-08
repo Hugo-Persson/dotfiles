@@ -24,6 +24,7 @@ local config = {
   send_composed_key_when_left_alt_is_pressed = false,
   send_composed_key_when_right_alt_is_pressed = true,
   max_fps = 120,
+  default_cwd = "/Users/hugo/.config/nix",
 
   -- default_prog = { "/opt/homebrew/bin/sesh" },
   background = {
@@ -33,8 +34,8 @@ local config = {
   font_size = 12,
 
   line_height = 1.1,
-  font = wezterm.font_with_fallback({ "JetBrains Mono", "JetBrainsMono Nerd Font Mono" }),
-  --font = wezterm.font("JetBrainsMono Nerd Font Mono"),
+  --font = wezterm.font_with_fallback({ "JetBrains Mono", "JetBrainsMono Nerd Font Mono" }),
+  font = wezterm.font("JetBrainsMono Nerd Font Mono"),
 
   color_scheme = cs.get_color_scheme(),
 

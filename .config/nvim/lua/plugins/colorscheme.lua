@@ -24,7 +24,6 @@ return {
     name = "catppuccin",
     priority = 1000,
     config = function()
-      vim.notify("Catppuccin loaded")
       local status_ok, dark_notify = pcall(require, "dark_notify")
       if status_ok then
         dark_notify.run()
@@ -32,7 +31,6 @@ return {
 
       local scheme = GetColorScheme()
       local base = scheme.base
-      vim.notify("base: " .. base)
       -- https://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md#diff--merge
       vim.api.nvim_set_hl(0, "AvanteConflictIncoming", {
         bg = blend_colors(scheme.green, scheme.base, 0.15),
@@ -74,7 +72,7 @@ return {
         aerial = true,
         diffview = true,
         alpha = true,
-        cmp = true,
+        --cmp = true,
         dashboard = true,
         flash = true,
         gitsigns = true,

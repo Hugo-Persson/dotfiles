@@ -1,12 +1,21 @@
 return {
   {
-    "yetone/avante.nvim",
+    -- "yetone/avante.nvim"
+    -- "msvechla/avente.nvim",
+    url = "git@github.com:msvechla/avante.nvim.git",
     event = "VeryLazy",
     lazy = false,
     build = "make",
+
     version = false, -- set this if you want to always pull the latest change
     opts = {
-      provider = "deepseek",
+      provider = "bedrock",
+      bedrock = {
+        -- model = "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+        model = "us.anthropic.claude-3-5-haiku-20241022-v1:0",
+        -- aws_profile = "bedrock",
+        -- aws_region = "us-east-2",
+      },
       vendors = {
         ["deepseek"] = {
           __inherited_from = "openai",

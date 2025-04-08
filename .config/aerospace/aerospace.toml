@@ -228,5 +228,9 @@ run = "layout floating"
 [[on-window-detected]]
 if.app-id = "com.riotgames.LeagueofLegends.LeagueClientUx"
 run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.fredrikburmester.streamyfin"
+run = "layout floating"
 # communication, C
 # communication, C
