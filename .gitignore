@@ -21,3 +21,11 @@
 !.local/share/yadm/archive
 !scripts
 !easy-setup.sh
+.config/.android
+.config/.wrangler/logs
+.config/jgit
+.config/immich
+.config/flutter
+.config/swiftpm
+.config/settings
+.config/tool_state
