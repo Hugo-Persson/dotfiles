@@ -40,3 +40,6 @@
 	recurse = true
 [fetch]
 	recurseSubmodules = on-demand
+[safe]
+	directory = /home/hugo/homelab-agent/stacks
+	directory = /home/hugo/homelab-agent/stacks/immich
