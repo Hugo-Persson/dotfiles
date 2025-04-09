@@ -16,6 +16,7 @@
 [core]
   pager = delta
   editor = nvim
+	hooksPath = /Users/hugo/scripts/pre-commit
 
 [interactive]
     diffFilter = delta --color-only
