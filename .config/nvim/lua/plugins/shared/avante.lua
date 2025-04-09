@@ -1,8 +1,7 @@
 return {
   {
-    -- "yetone/avante.nvim"
-    -- "msvechla/avente.nvim",
-    url = "git@github.com:msvechla/avante.nvim.git",
+    "yetone/avante.nvim",
+    --url = "git@github.com:msvechla/avante.nvim.git",
     event = "VeryLazy",
     lazy = false,
     build = "make",
@@ -13,7 +12,7 @@ return {
       bedrock = {
         -- model = "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
         model = "us.anthropic.claude-3-5-haiku-20241022-v1:0",
-        -- aws_profile = "bedrock",
+        --aws_profile = "bedrock",
         -- aws_region = "us-east-2",
       },
       vendors = {
