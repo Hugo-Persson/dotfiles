@@ -4,7 +4,7 @@ blacklist = ["scratch"]
 [[session]]
 name = "Downloads 📥"
 path = "~/Downloads"
-startup_command = "yazi"
+#startup_command = "yazi"
 
 [[session]]
 name = "Obsidian 💎"
