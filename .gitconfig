@@ -43,3 +43,7 @@
 [safe]
 	directory = /home/hugo/homelab-agent/stacks
 	directory = /home/hugo/homelab-agent/stacks/immich
+	directory = /home/hugo/homelab-agent/stacks/mediastack
+	directory = /home/hugo/homelab-agent/stacks/mediastack
+	directory = /home/hugo/homelab-agent/stacks/mediastack
+	directory = /home/hugo/homelab-agent/stacks/pinchflat
