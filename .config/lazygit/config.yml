@@ -91,3 +91,16 @@ customCommands:
       - type: "confirm"
         title: "Is the commit message correct?"
         body: "{{ .Form.Type }}{{if .Form.Scopes}}({{ .Form.Scopes }}){{end}}: {{ .Form.Description }}"
+
+  - key: "X"
+    command: 'git commit -m "{{ .Form.Message }}"'
+    description: "pre configured commit messages"
+    context: "files"
+    prompts:
+      - type: "menu"
+        title: "Select the type of change you are committing."
+        key: "Message"
+        options:
+          - name: "Bump dependencies"
+            description: "chore(bump): Dependency bump"
+            value: "chore(bump): Dependency bump"

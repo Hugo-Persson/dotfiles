@@ -1,5 +1,5 @@
-npm install -g @astrojs/language-server
-npm install -g semver
+ppnpm install -g @astrojs/language-server
+pnpm install -g semver
 
 echo "Installing rust..."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
