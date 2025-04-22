@@ -195,6 +195,15 @@ run = "move-node-to-workspace GPT"
 if.app-id = 'ai.perplexity.mac'
 run = "move-node-to-workspace GPT"
 
+[[on-window-detected]]
+if.app-id = 'com.apple.dt.Xcode '
+run = "move-node-to-workspace 3"
+[[on-window-detected]]
+if.app-id = 'com.google.android.studio'
+run = "move-node-to-workspace 3"
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCodeInsiders '
+run = "move-node-to-workspace 3"
 
 [[on-window-detected]]
 if.app-id = "org.whispersystems.signal-desktop"
@@ -231,6 +240,15 @@ run = "layout floating"
 
 [[on-window-detected]]
 if.app-id = "com.fredrikburmester.streamyfin"
+run = "layout floating"
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = "move-node-to-workspace 1"
+[[on-window-detected]]
+if.app-id = 'md.obsidian     '
+run = "move-node-to-workspace N"
+[[on-window-detected]]
+if.app-id = 'com.apple.accessibility.universalAccessAuthWarn'
 run = "layout floating"
 # communication, C
 # communication, C
