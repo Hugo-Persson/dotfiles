@@ -34,3 +34,14 @@ if vim.g.neovide then
   vim.g.neovide_padding_left = 10
   vim.g.neovide_refresh_rate = 144
 end
+
+-- add new filetypes
+vim.filetype.add({
+  extension = {
+    ojs = "javascript",
+    pyodide = "python",
+    webr = "r",
+  },
+})
+
+vim.cmd("verbose set conceallevel=0")

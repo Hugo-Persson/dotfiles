@@ -1,0 +1,45 @@
+abbr d dev
+abbr dc "docker compose"
+abbr dcd "docker compose down"
+abbr dcdv "docker compose down -v"
+abbr dcr "docker compose restart"
+abbr dcu "docker compose up -d"
+abbr dps "docker ps --format 'table {{.Names}}\t{{.Status}}'"
+
+abbr p "pnpm run (jq -r '.scripts|to_entries[]|((.key))' package.json | fzf-tmux -p --border-label='pnpm run')"
+abbr pa "pnpm add"
+abbr pb "pnpm build"
+abbr pd "pnpm dev"
+abbr pg "pnpm generate"
+abbr ph "pnpm help"
+abbr pi "pnpm install"
+abbr pim "pnpm import"
+abbr pit "pnpm install-test"
+abbr pl "pnpm lint"
+abbr pls "pnpm ls"
+abbr pr "pnpm run (jq -r '.scripts|to_entries[]|((.key))' package.json | fzf-tmux -p --border-label='pnpm run')"
+abbr ps "pnpm start"
+abbr psa "pnpm store add"
+abbr psp "pnpm store prune"
+abbr pss "pnpm store status"
+abbr pt "pnpm test"
+abbr pu "pnpm update"
+abbr pul "pnpm unlink"
+abbr pw "pnpm web"
+abbr pwdc "pwd | pbcopy"
+
+abbr v nvim
+abbr vfzf "nvim (fd --type f --hidden --follow --exclude .git | fzf-tmux -p -w 100 --reverse --preview 'bat --color=always --style=numbers --line-range=:500 {}')"
+abbr vf "nvim ~/.config/fish/config.fish"
+abbr vt "nvim ~/.config/tmux/tmux.conf"
+abbr vp "nvim package.json"
+
+abbr ssh_pub "cat ~/.ssh/id_rsa.pub | pbcopy"
+abbr my_g++ "g++ -c -O2 -Wall -Wextra -pedantic-errors -Wold-style-cast -std=c++11 -Werror"
+
+abbr - "cd -"
+#abbr md "mv ~/Downloads/"
+
+abbr tn "tmux new -s (pwd | sed 's/.*\///g')"
+
+abbr ds "open -a Dropshelf"

@@ -1,3 +1,4 @@
 .ssh/*
 secrets/*
 .aws/*
+.config/aichat

@@ -104,3 +104,6 @@ customCommands:
           - name: "Bump dependencies"
             description: "chore(bump): Dependency bump"
             value: "chore(bump): Dependency bump"
+          - name: "Spell bump"
+            description: "chore(spell): Added spelling "
+            value: "chore(spell): Added spelling "

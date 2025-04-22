@@ -152,10 +152,6 @@ return {
           })
         end,
       },
-      {
-        "Joakker/lua-json5",
-        build = "./install.sh",
-      },
     },
   },
 }

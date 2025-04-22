@@ -42,7 +42,7 @@
     "prefix": ["fig3"],
     "body": [
       ":::: {#fig-${1:label} layout=\"[[1, 1], [1]]\"}",
-      "",
+      "!!!!!!!!",
       "![${2:subcap1}](${3:figure}){#fig-$2}",
       "",
       "![${4:subcap1}](${5:figure}){#fig-$4}",
@@ -166,27 +166,19 @@
   },
   "background video": {
     "prefix": ["bgvid"],
-    "body": [
-      "{background-video=\"$1\" background-size=contain}"
-    ]
+    "body": ["{background-video=\"$1\" background-size=contain}"]
   },
   "background iframe": {
     "prefix": ["bgiframe"],
-    "body": [
-      "{background-iframe=\"$1\" background-interactive=true}"
-    ]
+    "body": ["{background-iframe=\"$1\" background-interactive=true}"]
   },
   "background color": {
     "prefix": ["bgcol"],
-    "body": [
-      "{background-color=\"$1\"}"
-    ]
+    "body": ["{background-color=\"$1\"}"]
   },
   "autoanimate": {
     "prefix": ["anim"],
-    "body": [
-      "{auto-animate=true}"
-    ]
+    "body": ["{auto-animate=true}"]
   },
   "pl": {
     "prefix": ["pl"],
