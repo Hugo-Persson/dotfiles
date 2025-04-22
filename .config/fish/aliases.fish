@@ -11,7 +11,6 @@ function neovide
 end
 alias template="template.sh"
 alias ld="lazydocker"
-abbr ssh_pub "cat ~/.ssh/id_rsa.pub | pbcopy"
 export EDITOR=nvim
 export XDG_CONFIG_HOME="$HOME/.config"
 alias gu=gitui
@@ -24,10 +23,4 @@ alias tmux='tmux -u'
 alias backup="~/terminal-config/backup/backup.sh"
 alias my_gcc="gcc -Werror -Wfloat-equal -Wextra -Wundef -std=c18 -g -Os -funsigned-char -fsanitize=address -fsanitize=undefined -ftrapv "
 alias pedantic_gcc="gcc Werror -Wfloat-equal -Wextra -Wall -Wundef -std=c11 -g -Os  -funsigned-char -fsanitize=address -fsanitize=undefined -ftrapv -fno-omit-frame-pointer -ansi -pedantic"
-abbr my_g++ "g++ -c -O2 -Wall -Wextra -pedantic-errors -Wold-style-cast -std=c++11 -Werror"
 alias ly "lazygit -w ~ -g ~/.local/share/yadm/repo.git"
-
-abbr - "cd -"
-abbr md "mv ~/Downloads/"
-
-abbr tn "tmux new -s (pwd | sed 's/.*\///g')"
