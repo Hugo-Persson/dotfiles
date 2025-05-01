@@ -4,6 +4,8 @@ abbr dcd "docker compose down"
 abbr dcdv "docker compose down -v"
 abbr dcr "docker compose restart"
 abbr dcu "docker compose up -d"
+abbr dl "docker logs"
+abbr dsl "docker compose logs"
 abbr dps "docker ps --format 'table {{.Names}}\t{{.Status}}'"
 abbr dss "docker ps"
 
