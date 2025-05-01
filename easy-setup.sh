@@ -15,10 +15,10 @@ check_brew() {
 }
 
 # Exit if Homebrew is already installed
-if check_brew; then
+if ! check_brew; then
   echo "Homebrew not installed, please install with"
   echo "/bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
-  exit 0
+  exit 1
 fi
 
 # Install necessary packages
