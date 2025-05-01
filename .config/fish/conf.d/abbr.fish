@@ -5,7 +5,7 @@ abbr dcdv "docker compose down -v"
 abbr dcr "docker compose restart"
 abbr dcu "docker compose up -d"
 abbr dps "docker ps --format 'table {{.Names}}\t{{.Status}}'"
-abbr ds "docker ps"
+abbr dss "docker ps"
 
 abbr p "pnpm run (jq -r '.scripts|to_entries[]|((.key))' package.json | fzf-tmux -p --border-label='pnpm run')"
 abbr pa "pnpm add"
