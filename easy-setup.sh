@@ -5,6 +5,10 @@ set -e
 check_brew() {
   if command -v brew &>/dev/null; then
     return 0
+  elif [[ "$OSTYPE" == "linux-gnu"* ]] && [ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
+    return 0
+  elif [[ "$OSTYPE" == "darwin"* ]] && [ -f "/usr/local/bin/brew" ] || [ -f "/opt/homebrew/bin/brew" ]; then
+    return 0
   else
     return 1
   fi
