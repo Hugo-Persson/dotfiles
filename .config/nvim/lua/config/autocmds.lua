@@ -8,7 +8,7 @@ end
 vim.api.nvim_create_autocmd("FileType", {
   desc = "Markdown keymaps",
   group = augroup("markdown"),
-  pattern = { "markdown" },
+  pattern = { "markdown", "quarto", "typst" },
   callback = function()
     require("config.markdown-keymaps")()
   end,

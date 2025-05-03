@@ -6,6 +6,7 @@ return {
         "html",
         "css",
         "javascript",
+        "typst",
         "typescript",
         "tsx",
         "c",
