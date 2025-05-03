@@ -250,5 +250,13 @@ run = "move-node-to-workspace N"
 [[on-window-detected]]
 if.app-id = 'com.apple.accessibility.universalAccessAuthWarn'
 run = "layout floating"
-# communication, C
-# communication, C
+
+
+[[on-window-detected]]
+if.app-id = 'io.github.keycastr'
+run = "layout floating"
+[[on-window-detected]]
+if.app-id = 'com.lowtechguys.Clop'
+run = "layout floating"
+
+
