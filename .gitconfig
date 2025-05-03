@@ -48,3 +48,5 @@
 	directory = /home/hugo/homelab-agent/stacks/mediastack
 	directory = /home/hugo/homelab-agent/stacks/mediastack
 	directory = /home/hugo/homelab-agent/stacks/pinchflat
+[credential]
+	helper = store
