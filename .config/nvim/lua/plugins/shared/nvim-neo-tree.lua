@@ -30,6 +30,23 @@ return {
             end,
             desc = "Copy Path to Clipboard",
           },
+          ["S"] = {
+            function(state)
+              local node = state.tree:get_node()
+              local path = node:get_id()
+              vim.fn.jobstart({ "open", "-a", "Dropshelf", path }, { detach = true })
+            end,
+            desc = "Send to dropshelf",
+          },
+
+          ["F"] = {
+            function(state)
+              local node = state.tree:get_node()
+              local path = node:get_id()
+              vim.fn.jobstart({ "open", "-R", path }, { detach = true })
+            end,
+            desc = "Open in Finder",
+          },
         },
       },
     },

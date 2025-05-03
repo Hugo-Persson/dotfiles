@@ -51,3 +51,15 @@ vim.keymap.set("n", "<leader>fO", function()
     print("No file is currently open")
   end
 end, { desc = "[P]Open current file in Finder" })
+
+-- Open current file in finder
+vim.keymap.set("n", "<leader>fD", function()
+  local file_path = vim.fn.expand("%:p")
+  if file_path ~= "" then
+    local command = "open -a Dropshelf " .. vim.fn.shellescape(file_path)
+    vim.fn.system(command)
+    print("Sent file to Dropshelf" .. file_path)
+  else
+    print("No file is currently open")
+  end
+end, { desc = "[P]Send current file to Dropshelf" })

@@ -12,7 +12,9 @@
 	autoSetupRemote = true
 [pull]
   rebase = false
-
+[log]
+    abbrevCommit = true  # short commits
+    graphColors = blue,yellow,cyan,magenta,green,red
 [core]
   pager = delta
   editor = nvim

@@ -1,4 +1,5 @@
 tap "cormacrelf/tap"
+tap "dev-shimada/urlencode"
 tap "getsentry/tools"
 tap "grishka/grishka"
 tap "homebrew/bundle"
@@ -32,6 +33,7 @@ brew "glow"
 brew "gnupg"
 brew "go"
 brew "gum"
+brew "httpie"
 brew "imagemagick"
 brew "node"
 brew "immich-cli"
@@ -67,19 +69,22 @@ brew "tabiew"
 brew "thefuck"
 brew "tldr"
 brew "tmux"
+brew "typst"
 brew "vale"
 brew "wget"
 brew "xcode-build-server"
 brew "yadm"
 brew "zoxide"
 brew "cormacrelf/tap/dark-notify"
+brew "dev-shimada/urlencode/urlencode"
 brew "getsentry/tools/sentry-wizard"
 brew "hugo-persson/dns-cli-tools/dns-cli-tools"
 brew "infisical/get-cli/infisical"
 brew "mongodb/brew/mongodb-database-tools"
 brew "tuist/tuist/tuist@4.46.1", link: false
 brew "tuist/tuist/tuist@4.48.0", link: false
-brew "tuist/tuist/tuist@4.48.1"
+brew "tuist/tuist/tuist@4.48.1", link: false
+brew "tuist/tuist/tuist@4.48.2"
 cask "1password"
 cask "aerospace"
 cask "arc"
@@ -103,8 +108,11 @@ cask "hyperkey"
 cask "jetbrains-toolbox"
 cask "jordanbaird-ice"
 cask "keyboard-cleaner"
+cask "keycastr"
+cask "legcord"
 cask "localsend"
 cask "logi-options+"
+cask "mactex-no-gui"
 cask "middleclick"
 cask "mos"
 cask "neardrop"
@@ -134,7 +142,6 @@ cask "zoom"
 mas "2FAS - Two Factor Authentication", id: 6443941139
 mas "Command X", id: 6448461551
 mas "Folder Preview", id: 6698876601
-mas "InjectionIII", id: 1380446739
 mas "Linearity Curve", id: 1219074514
 mas "Microsoft PowerPoint", id: 462062816
 mas "Numbers", id: 409203825

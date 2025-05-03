@@ -59,8 +59,8 @@ imap <Tab> <Action>(EditorIndentLineOrSelection)
 imap <S-Tab> <Action>(EditorUnindentSelection)
 
 nmap <Tab> <Action>(GotoNextTab)
-nmap <S-Tab> <action>(PreviousTab)
-nmap <Tab> <action>(NextTab)
+nmap <S-h> <action>(PreviousTab)
+nmap <S-l> <action>(NextTab)
 nmap <S-e> <action>(ShowErrorDescription)
 nmap <S-k> <action>(ShowHoverInfo)
 nmap <leader>p _dP " Pastes but stores deleted text

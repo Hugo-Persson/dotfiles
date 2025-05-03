@@ -31,7 +31,7 @@ local config = {
     b.get_background(1, 1),
   },
 
-  font_size = 12,
+  font_size = 13,
 
   line_height = 1.1,
   --font = wezterm.font_with_fallback({ "JetBrains Mono", "JetBrainsMono Nerd Font Mono" }),
@@ -162,7 +162,8 @@ local config = {
       key = "q",
       action = act.Multiple({
         act.SendKey({ key = "\x1b" }), -- escape
-        k.multiple_actions(":qa!"),
+        k.multiple_actions(":wa"),
+        k.multiple_actions(":qa"),
       }),
     },
     {
