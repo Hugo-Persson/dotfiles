@@ -27,9 +27,9 @@ local config = {
   default_cwd = "/Users/hugo/.config/nix",
 
   -- default_prog = { "/opt/homebrew/bin/sesh" },
-  background = {
-    b.get_background(1, 1),
-  },
+  -- background = {
+  --   b.get_background(1, 1),
+  -- },
 
   font_size = 13,
 
@@ -46,14 +46,6 @@ local config = {
     bottom = 0,
   },
 
-  set_environment_variables = {
-    -- THEME_FLAVOUR = "latte",
-    TERM = "xterm-256color",
-    BAT_THEME = h.is_dark() and "Catppuccin Mocha" or "Catppuccin Latte",
-    IS_DARK = h.is_dark() and "1" or "0",
-    LC_ALL = "en_US.UTF-8",
-  },
-
   -- general options
   adjust_window_size_when_changing_font_size = false,
   debug_key_events = false,
@@ -65,6 +57,13 @@ local config = {
 
   -- keys
   keys = {
+    -- Disable ALT + ENTER
+    {
+      mods = "ALT",
+      key = "Enter",
+      action = act.DisableDefaultAssignment,
+    },
+
     k.cmd_key(".", k.multiple_actions(":ZenMode")),
     -- k.cmd_key("H", act.SendKey({ mods = "CTRL", key = "h" })),
     -- k.cmd_key("J", act.SendKey({ mods = "CTRL", key = "j" })),
