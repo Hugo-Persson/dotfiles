@@ -28,6 +28,17 @@ path = "~/.config/wezterm/"
 startup_command = "nvim wezterm.lua"
 
 [[session]]
+name = "Multi Host Router 🚧"
+path = "~/my-projects/traefik-multi-host-mapper/"
+startup_command = "nvim config.toml"
+
+[[session]]
 name = "Dua"
 path = "/"
 startup_command = "dua i"
+
+
+[[session]]
+name = "Dotfiles 🧑‍💻"
+path = "~"
+startup_command = "nvim README.md"
