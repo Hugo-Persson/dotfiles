@@ -1,6 +1,5 @@
 local ls = require("luasnip")
 local ls = require("luasnip")
-vim.notify("Loading snippets for qmd")
 ls.filetype_extend("quarto", { "markdown" })
 
 -- Add Quarto-specific snippets here

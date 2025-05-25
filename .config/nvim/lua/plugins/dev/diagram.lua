@@ -1,12 +1,13 @@
 return {
   {
     "3rd/diagram.nvim",
+    ft = { "markdown", "quarto", "md", "txt" }, -- Only load for specific filetypes
     dependencies = {
       "3rd/image.nvim",
     },
-    opts = { -- you can just pass {}, defaults below
+    opts = {
       events = {
-        render_buffer = { "InsertLeave", "BufWinEnter", "TextChanged" },
+        render_buffer = { "InsertLeave", "TextChanged" }, -- Removed BufWinEnter to avoid processing on every file open
         clear_buffer = { "BufLeave" },
       },
       renderer_options = {

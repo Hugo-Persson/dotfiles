@@ -3,7 +3,7 @@ return {
     "yetone/avante.nvim",
     --url = "git@github.com:msvechla/avante.nvim.git",
     event = "VeryLazy",
-    lazy = false,
+    -- lazy = false,
     build = "make",
 
     version = false, -- set this if you want to always pull the latest change
@@ -34,7 +34,6 @@ return {
       "MunifTanjim/nui.nvim",
       --- The below dependencies are optional,
       "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-      "zbirenbaum/copilot.lua", -- for providers='copilot'
       {
         -- support for image pasting
         "HakonHarnes/img-clip.nvim",

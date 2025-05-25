@@ -62,7 +62,7 @@ function GetSharedSpec()
 
     { import = "lazyvim.plugins.extras.lang.toml" },
     { import = "lazyvim.plugins.extras.lang.yaml" },
-    { import = "lazyvim.plugins.extras.ai.copilot" },
+    --{ import = "lazyvim.plugins.extras.ai.copilot" },
 
     { import = "lazyvim.plugins.extras.lang.git" },
     { import = "lazyvim.plugins.extras.lang.markdown" },
@@ -89,6 +89,12 @@ function GetSharedSpec()
 end
 
 function getSpec()
+  -- Check if we're in fast mode first
+  if package.loaded["config.fast"] and package.loaded["config.fast"].is_fast() then
+    -- Return minimal plugins for fast startup
+    return package.loaded["config.fast"].get_fast_plugins()
+  end
+
   local s = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
@@ -109,7 +115,13 @@ function getSpec()
   for _, item in ipairs(GetServerOnlyExtras()) do
     table.insert(s, item)
   end
-  table.insert(s, { import = "plugins" })
+
+  -- Load main plugins directory with optimization patterns
+  table.insert(s, {
+    { import = "plugins", priority = 50 },
+    { import = "plugins.dev", priority = 40 },
+    { import = "plugins.shared", priority = 30 },
+  })
 
   -- Debug: Write to a file
   -- local file = io.open(vim.fn.stdpath("cache") .. "/lazy_spec_debug.lua", "w")
@@ -125,9 +137,8 @@ end
 require("lazy").setup({
   spec = getSpec(),
   defaults = {
-    -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
-    -- If you know what you're doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.
-    lazy = false,
+    -- Set lazy=true to improve startup time. Most plugins should be loaded on-demand.
+    lazy = true,
     -- It's recommended to leave version=false for now, since a lot the plugin that support versioning,
     -- have outdated releases, which may break your Neovim install.
     version = false, -- always use the latest git commit
@@ -136,13 +147,17 @@ require("lazy").setup({
   install = { colorscheme = {} },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
+    cache = {
+      enabled = true,
+    },
+    reset_packpath = true, -- reset the package path to improve startup time
     rtp = {
       -- disable some rtp plugins
       disabled_plugins = {
         "gzip",
-        -- "matchit",
-        -- "matchparen",
-        -- "netrwPlugin",
+        "matchit",
+        "matchparen",
+        "netrwPlugin",
         "tarPlugin",
         "tohtml",
         "tutor",

@@ -1,6 +1,8 @@
 return {
   {
     "mrcjkb/rustaceanvim",
+    ft = "rust", -- Only load for rust files
+    ft = { "rust" }, -- Only load for rust files
     opts = {
       server = {
         default_settings = {

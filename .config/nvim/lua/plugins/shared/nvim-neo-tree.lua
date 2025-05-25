@@ -47,6 +47,31 @@ return {
             end,
             desc = "Open in Finder",
           },
+
+          ["d"] = {
+            function(state)
+              local node = state.tree:get_node()
+              local path = node:get_id()
+              local name = node.name
+              
+              -- Confirm deletion
+              local choice = vim.fn.confirm("Delete " .. name .. "?", "&Yes\n&No", 2)
+              if choice == 1 then
+                vim.fn.jobstart({ "trash", path }, {
+                  on_exit = function(_, exit_code)
+                    if exit_code == 0 then
+                      vim.notify("Moved to trash: " .. name)
+                      -- Refresh the tree
+                      require("neo-tree.sources.manager").refresh("filesystem")
+                    else
+                      vim.notify("Failed to move to trash: " .. name, vim.log.levels.ERROR)
+                    end
+                  end
+                })
+              end
+            end,
+            desc = "Delete (move to trash)",
+          },
         },
       },
     },

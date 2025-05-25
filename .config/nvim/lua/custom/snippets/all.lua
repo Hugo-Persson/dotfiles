@@ -24,6 +24,17 @@ local conds_expand = require("luasnip.extras.conditions.expand")
 local function copy(args)
   return args[1]
 end
+ls.add_snippets("python", {
+  s("fold", {
+    t({ "", "# ======= " }),
+    i(1, "Section Name"),
+    t(" ======="),
+    t({ " " }),
+    i(2),
+    t({ "", "# =======" }),
+  }),
+})
+
 ls.add_snippets("all", {
   -- trigger is `fn`, second argument to snippet-constructor are the nodes to insert into the buffer on expansion.
   s("fn", {

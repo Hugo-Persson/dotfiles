@@ -4,6 +4,7 @@ return {
     "quarto-dev/quarto-nvim",
 
     dev = false,
+    ft = { "quarto", "markdown", "rmarkdown" }, -- Only load for specific filetypes
     opts = {
       lspFeatures = {
         enabled = true,
@@ -18,7 +19,6 @@ return {
         },
       },
     },
-    lazy = false,
     dependencies = {
       "jmbuhr/otter.nvim",
       "nvim-treesitter/nvim-treesitter",
@@ -34,13 +34,15 @@ return {
       { "<leader>qra", ":QuartoSendAll<cr>", desc = "run [a]ll" },
       { "<leader>qrb", ":QuartoSendBelow<cr>", desc = "run [b]elow" },
       { "<leader>qrr", ":QuartoSendAbove<cr>", desc = "to cu[r]sor" },
-      { "<leader>oa", require("otter").activate, desc = "otter [a]ctivate" },
-      { "<leader>od", require("otter").activate, desc = "otter [d]eactivate" },
+      -- { "<leader>oa", require("otter").activate, desc = "otter [a]ctivate" },
+      -- { "<leader>od", require("otter").activate, desc = "otter [d]eactivate" },
     },
   },
   { -- directly open ipynb files as quarto docuements
     -- and convert back behind the scenes
     "GCBallesteros/jupytext.nvim",
+    -- ft = { "quarto", "ipynb" },
+    lazy = false,
     opts = {
       custom_language_formatting = {
         python = {

@@ -2,11 +2,10 @@ return {
 
   { -- for lsp features in code cells / embedded code
     "jmbuhr/otter.nvim",
+    ft = { "quarto", "markdown", "rmarkdown" }, -- Only load for specific filetypes
     dependencies = {
-      {
-        "neovim/nvim-lspconfig",
-        "nvim-treesitter/nvim-treesitter",
-      },
+      "neovim/nvim-lspconfig",
+      "nvim-treesitter/nvim-treesitter",
     },
     opts = {},
   },
