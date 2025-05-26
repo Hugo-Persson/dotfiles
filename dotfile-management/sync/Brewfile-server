@@ -1,6 +1,8 @@
 tap "homebrew/bundle"
 tap "hugo-persson/dns-cli-tools"
 tap "infisical/get-cli"
+brew "mprocs"
+brew "httpie"
 brew "bat"
 brew "ccrypt"
 brew "eza"
