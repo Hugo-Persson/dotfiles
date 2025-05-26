@@ -1,3 +1,4 @@
+local filesystem = require("neo-tree.sources.filesystem")
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -13,6 +14,50 @@ return {
       },
     },
     opts = {
+      filesystem = {
+        commands = {
+          -- over write default 'delete' command to 'trash'.
+          delete = function(state)
+            local inputs = require("neo-tree.ui.inputs")
+            local path = state.tree:get_node().path
+            local msg = "Are you sure you want to trash " .. path
+            inputs.confirm(msg, function(confirmed)
+              if not confirmed then
+                return
+              end
+
+              vim.fn.system({ "trash", vim.fn.fnameescape(path) })
+              require("neo-tree.sources.manager").refresh(state.name)
+            end)
+          end,
+
+          -- over write default 'delete_visual' command to 'trash' x n.
+          delete_visual = function(state, selected_nodes)
+            local inputs = require("neo-tree.ui.inputs")
+
+            -- get table items count
+            function GetTableLen(tbl)
+              local len = 0
+              for n in pairs(tbl) do
+                len = len + 1
+              end
+              return len
+            end
+
+            local count = GetTableLen(selected_nodes)
+            local msg = "Are you sure you want to trash " .. count .. " files ?"
+            inputs.confirm(msg, function(confirmed)
+              if not confirmed then
+                return
+              end
+              for _, node in ipairs(selected_nodes) do
+                vim.fn.system({ "trash", vim.fn.fnameescape(node.path) })
+              end
+              require("neo-tree.sources.manager").refresh(state.name)
+            end)
+          end,
+        },
+      },
       window = {
         mappings = {
           ["YY"] = {
@@ -46,31 +91,6 @@ return {
               vim.fn.jobstart({ "open", "-R", path }, { detach = true })
             end,
             desc = "Open in Finder",
-          },
-
-          ["d"] = {
-            function(state)
-              local node = state.tree:get_node()
-              local path = node:get_id()
-              local name = node.name
-              
-              -- Confirm deletion
-              local choice = vim.fn.confirm("Delete " .. name .. "?", "&Yes\n&No", 2)
-              if choice == 1 then
-                vim.fn.jobstart({ "trash", path }, {
-                  on_exit = function(_, exit_code)
-                    if exit_code == 0 then
-                      vim.notify("Moved to trash: " .. name)
-                      -- Refresh the tree
-                      require("neo-tree.sources.manager").refresh("filesystem")
-                    else
-                      vim.notify("Failed to move to trash: " .. name, vim.log.levels.ERROR)
-                    end
-                  end
-                })
-              end
-            end,
-            desc = "Delete (move to trash)",
           },
         },
       },
