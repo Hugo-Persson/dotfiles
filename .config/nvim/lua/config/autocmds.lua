@@ -35,15 +35,15 @@ vim.api.nvim_create_autocmd("User", {
   end,
 })
 
--- Disable lazygit
-vim.api.nvim_create_autocmd("User", {
-  pattern = "LazyVimKeymaps",
-  once = true,
-  callback = function()
-    pcall(vim.keymap.del, "n", "<leader>gf")
-    pcall(vim.keymap.del, "n", "<leader>gl")
-    pcall(vim.keymap.del, "n", "<leader>gg")
-    pcall(vim.keymap.del, "n", "<leader>gG")
-    pcall(vim.keymap.del, "n", "<leader>gL")
-  end,
-})
+-- -- Disable lazygit
+-- vim.api.nvim_create_autocmd("User", {
+--   pattern = "LazyVimKeymaps",
+--   once = true,
+--   callback = function()
+--     pcall(vim.keymap.del, "n", "<leader>gf")
+--     pcall(vim.keymap.del, "n", "<leader>gl")
+--     pcall(vim.keymap.del, "n", "<leader>gg")
+--     pcall(vim.keymap.del, "n", "<leader>gG")
+--     pcall(vim.keymap.del, "n", "<leader>gL")
+--   end,
+-- })

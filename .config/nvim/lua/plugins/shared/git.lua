@@ -1,6 +1,11 @@
 return {
   {
+    event = "VeryLazy",
     "NeogitOrg/neogit",
+    keys = {
+      { "<leader>gg", "<cmd>Neogit<cr>", desc = "Neogit" },
+      { "<leader>gG", "<cmd>Neogit kind=tab<cr>", desc = "Neogit in tab" },
+    },
     dependencies = {
       "nvim-lua/plenary.nvim", -- required
       "sindrets/diffview.nvim", -- optional - Diff integration
@@ -8,6 +13,7 @@ return {
       "ibhagwan/fzf-lua", -- optional
     },
     config = true,
+    opts = {},
   },
   {
     "FabijanZulj/blame.nvim",
@@ -28,6 +34,7 @@ return {
   {
     --- https://www.youtube.com/watch?v=LLB8Cpj8IKU
     "akinsho/git-conflict.nvim",
+    event = "VeryLazy",
     config = function()
       require("git-conflict").setup({
         default_mappings = true, -- disable buffer local mapping created by this plugin

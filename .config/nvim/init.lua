@@ -1,3 +1,6 @@
+-- vim.lsp.set_log_level("debug")
+
+vim.lsp.set_log_level("warn") -- or "error", "warn", "info", "debug", "trace"
 -- if vim.env.PROF then
 --   -- example for lazy.nvim
 --   -- change this to the correct path for your plugin manager
@@ -11,7 +14,6 @@
 --     },
 --   })
 -- end
-
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 -- Adding .root for root detection
@@ -45,10 +47,13 @@ vim.filetype.add({
     pyodide = "python",
     webr = "r",
   },
+  pattern = {
+    ["Fastfile"] = "ruby",
+  },
 })
 
-vim.cmd("verbose set conceallevel=0")
-vim.opt.foldmethod = "marker"
-vim.opt.foldmarker = "=======,======="
+--vim.cmd("verbose set conceallevel=0")
+-- vim.opt.foldmethod = "marker"
+-- vim.opt.foldmarker = "=======,======="
 
 vim.g.db_ui_save_location = "~/.config/nvim/dadbod_ui/"

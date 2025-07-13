@@ -8,8 +8,7 @@ gui:
       - bold
     inactiveBorderColor:
       - black
-        #showFileTree: true # for rendering changes files in a tree format
-
+      #showFileTree: true # for rendering changes files in a tree format
 os:
   edit: "nvim {{filename}}"
   editAtLine: "nvim +{{line}} {{filename}}"
@@ -28,7 +27,12 @@ customCommands:
     description: Pick AI commit
     command: ~/scripts/ai-commit.sh
     context: files
-    subprocess: true
+    output: terminal
+  - key: <c-k>
+    description: Koji
+    command: koji
+    context: files
+    output: terminal
   - key: "<c-s>"
     description: "Accept their changes in merge conflict"
     command: "git checkout --theirs -- {{.SelectedFile.Name | quote}} "
@@ -91,7 +95,6 @@ customCommands:
       - type: "confirm"
         title: "Is the commit message correct?"
         body: "{{ .Form.Type }}{{if .Form.Scopes}}({{ .Form.Scopes }}){{end}}: {{ .Form.Description }}"
-
   - key: "X"
     command: 'git commit -m "{{ .Form.Message }}"'
     description: "pre configured commit messages"

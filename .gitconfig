@@ -51,4 +51,9 @@
 	directory = /home/hugo/homelab-agent/stacks/mediastack
 	directory = /home/hugo/homelab-agent/stacks/pinchflat
 [credential]
-	helper = store
+  helper = store
+
+[url "ssh://git@github.com/"]
+    insteadOf = https://github.com/
+[url "ssh://git@gitlab.combain.com"]
+    insteadOf = https://gitlab.combain.com

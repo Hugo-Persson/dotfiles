@@ -39,128 +39,54 @@ return {
           return require("codecompanion.adapters").extend("copilot", {
             schema = {
               model = {
-                default = "gemini-2.5-pro",
+                default = "claude-sonnet-4",
               },
             },
           })
         end,
       },
       prompt_library = {
-        ["Test workflow"] = {
-          strategy = "workflow",
-          description = "Use a workflow to test the plugin",
+        ["GenerateFunctionName"] = {
+          strategy = "chat",
+          description = "Generate a descriptive function name based on code logic",
           opts = {
-            index = 4,
+            index = 1,
+            is_slash_cmd = false,
+            auto_submit = true,
+            short_name = "fname",
           },
           prompts = {
             {
-              {
-                role = "user",
-                content = "Generate a Python class for managing a book library with methods for adding, removing, and searching books",
-                opts = {
-                  auto_submit = false,
-                },
-              },
-            },
-            {
-              {
-                role = "user",
-                content = "Write unit tests for the library class you just created",
-                opts = {
-                  auto_submit = true,
-                },
-              },
-            },
-            {
-              {
-                role = "user",
-                content = "Create a TypeScript interface for a complex e-commerce shopping cart system",
-                opts = {
-                  auto_submit = true,
-                },
-              },
-            },
-            {
-              {
-                role = "user",
-                content = "Write a recursive algorithm to balance a binary search tree in Java",
-                opts = {
-                  auto_submit = true,
-                },
-              },
-            },
-            {
-              {
-                role = "user",
-                content = "Generate a comprehensive regex pattern to validate email addresses with explanations",
-                opts = {
-                  auto_submit = true,
-                },
-              },
-            },
-            {
-              {
-                role = "user",
-                content = "Create a Rust struct and implementation for a thread-safe message queue",
-                opts = {
-                  auto_submit = true,
-                },
-              },
-            },
-            {
-              {
-                role = "user",
-                content = "Write a GitHub Actions workflow file for CI/CD with multiple stages",
-                opts = {
-                  auto_submit = true,
-                },
-              },
-            },
-            {
-              {
-                role = "user",
-                content = "Create SQL queries for a complex database schema with joins across 4 tables",
-                opts = {
-                  auto_submit = true,
-                },
-              },
-            },
-            {
-              {
-                role = "user",
-                content = "Write a Lua configuration for Neovim with custom keybindings and plugins",
-                opts = {
-                  auto_submit = true,
-                },
-              },
-            },
-            {
-              {
-                role = "user",
-                content = "Generate documentation in JSDoc format for a complex JavaScript API client",
-                opts = {
-                  auto_submit = true,
-                },
+              role = "user",
+              content = function(context)
+                local code = require("codecompanion.helpers.actions").get_code(context.start_line, context.end_line)
+
+                return [[Please generate a descriptive and idiomatic function name for the following code snippet. 
+The name should:
+- Clearly communicate the function's purpose
+- Follow the naming conventions of the language (]] .. context.filetype .. [[) 
+- Be concise yet descriptive
+- Not include generic terms like "function", "method", or "handler" unless necessary
+
+Here's the code:
+
+```]] .. context.filetype .. [[
+]] .. code .. [[
+```
+
+Please respond ONLY with the suggested function name, nothing else.]]
+              end,
+              opts = {
+                contains_code = true,
               },
             },
           },
         },
-      },
-      strategies = {
-        chat = {
-          adapter = "copilot",
-          keymaps = {
-            send = {
-              modes = {
-                i = { "<C-CR>", "<C-s>" },
-              },
-            },
-            completion = {
-              modes = {
-                i = "<C-x>",
-              },
-            },
+        strategies = {
+          chat = {
+            adapter = "copilot",
           },
+
           slash_commands = {
             ["buffer"] = {
               keymaps = {
@@ -221,13 +147,14 @@ return {
     keys = {
 
       {
-        "<C-a>",
+        --"<C-y>",
+        "<Leader>cca",
         "<cmd>CodeCompanionActions<CR>",
         desc = "Open the action palette",
         mode = { "n", "v" },
       },
       {
-        "<Leader>cca",
+        "<Leader>ccc",
         "<cmd>CodeCompanionChat Toggle<CR>",
         desc = "Toggle a chat buffer",
         mode = { "n", "v" },
@@ -237,6 +164,16 @@ return {
         "<cmd>CodeCompanionChat Add<CR>",
         desc = "Add code to a chat buffer",
         mode = { "v" },
+      },
+      {
+        "<Leader>ccf",
+
+        function()
+          -- Select around the current function using mini.ai
+          vim.cmd("normal! vaf")
+          require("codecompanion").prompt("GenerateFunctionName")
+        end,
+        desc = "Generate function name",
       },
     },
     init = function()

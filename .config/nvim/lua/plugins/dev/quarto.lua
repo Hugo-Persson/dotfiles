@@ -4,7 +4,7 @@ return {
     "quarto-dev/quarto-nvim",
 
     dev = false,
-    ft = { "quarto", "markdown", "rmarkdown" }, -- Only load for specific filetypes
+    ft = { "quarto" }, -- Only load for specific filetypes
     opts = {
       lspFeatures = {
         enabled = true,

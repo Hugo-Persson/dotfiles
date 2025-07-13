@@ -2,9 +2,12 @@ return {
   "epwalsh/obsidian.nvim",
   version = "*", -- Recommended, use latest release instead of latest commit
   lazy = true,
+  enabled = false,
   event = {
     -- Load only when opening files in your vault
-    "BufReadPre " .. vim.fn.expand("~") .. "/Documents/second-brain/**.md",
+    "BufReadPre "
+      .. vim.fn.expand("~")
+      .. "/Documents/second-brain/**.md",
     "BufNewFile " .. vim.fn.expand("~") .. "/Documents/second-brain/**.md",
   },
   dependencies = {

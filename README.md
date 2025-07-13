@@ -336,3 +336,7 @@ MongoDB database tools
 ### [tuist](https://github.com/tuist/tuist)
 
 Create, maintain, and interact with Xcode projects at scale
+
+https://github.com/jhspetersson/fselect
+
+https://github.com/hrkfdn/ncspot

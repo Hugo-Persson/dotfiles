@@ -15,6 +15,14 @@ return {
       filetypes = {
         markdown = true,
         help = true,
+        -- Disable copilot for files starting with exam_
+        ["*"] = function()
+          local filename = vim.fn.expand("%:t")
+          if filename:match("^exam_") then
+            return false
+          end
+          return true
+        end,
       },
     },
   },
