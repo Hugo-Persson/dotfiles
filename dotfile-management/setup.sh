@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
-yadm decrypt
 brew install gum
+gum confirm "This script will install all the necessary tools and configurations. Do you want to continue?" || exit 1
+if gum confirm "Do you trust this machine and want to decrypt your yadm secrets?"; then
+  yadm decrypt
+else
+  ~/dotfile-management/setup/default-secrets.sh
+  echo "Skipping decryption of yadm secrets."
+fi
 
 PROFILE=$(~/scripts/set-profile.sh)
 
