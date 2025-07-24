@@ -111,7 +111,8 @@ alt-6 = 'workspace 6'
 alt-c = 'workspace C'       # Communication
 alt-b = 'workspace B'       # Browser 1
 alt-x = 'workspace B2'      # Browser 2
-alt-n = 'workspace N'       # Notes => Obsidian 
+alt-n = 'workspace N'       # NK 
+alt-o = 'workspace O'       # Obsidian 
 alt-w = "workspace W"       # WezTerm
 alt-p = "workspace P"       # Postman
 alt-t = "workspace T"       # Tasks
@@ -128,6 +129,7 @@ alt-shift-b = 'move-node-to-workspace B'
 alt-shift-x = 'move-node-to-workspace B2'
 alt-shift-c = 'move-node-to-workspace C'
 alt-shift-n = 'move-node-to-workspace N'
+alt-shift-o = 'move-node-to-workspace O'
 alt-shift-w = 'move-node-to-workspace W'
 alt-shift-p = 'move-node-to-workspace P'
 alt-shift-t = 'move-node-to-workspace T'
@@ -246,7 +248,7 @@ if.app-id = 'com.spotify.client'
 run = "move-node-to-workspace 1"
 [[on-window-detected]]
 if.app-id = 'md.obsidian     '
-run = "move-node-to-workspace N"
+run = "move-node-to-workspace O"
 [[on-window-detected]]
 if.app-id = 'com.apple.accessibility.universalAccessAuthWarn'
 run = "layout floating"
@@ -259,4 +261,6 @@ run = "layout floating"
 if.app-id = 'com.lowtechguys.Clop'
 run = "layout floating"
 
-
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.toolbox'
+run = "layout floating"
