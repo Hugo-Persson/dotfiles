@@ -1,4 +1,5 @@
 import fs from "fs";
+
 import { browserSubLayer } from "./sublayers/browse";
 import { codeSubLayer } from "./sublayers/codeSubLayer";
 import { moveSubLayer } from "./sublayers/moveSubLayer";
@@ -41,11 +42,19 @@ const propegateKeyCodes = [
 	"n",
 	"quote", // same as 'ä'
 	"x",
+	"t",
+	"f",
 ];
 
 let sublayers: SubLayerConfig = {
 	spacebar: app("ChatGPT"),
-	f: open("raycast://extensions/raycast/navigation/search-menu-items"),
+	q: {
+		to: [
+			{
+				key_code: "caps_lock",
+			},
+		],
+	},
 	p: open("raycast://extensions/jomifepe/bitwarden/search"),
 	g: open("raycast://extensions/jomifepe/bitwarden/generate-password"),
 	b: browserSubLayer,
@@ -59,13 +68,12 @@ let sublayers: SubLayerConfig = {
 		x: app("Xcode"),
 		m: app("Mail"),
 	},
-	t: open("raycast://extensions/raycast/raycast-notes/raycast-notes"),
 	a: {
-		description: "AI Chat nvim",
+		description: "AI Chat",
 		to: [
 			{
-				key_code: "f1",
-				modifiers: [],
+				key_code: "a",
+				modifiers: ["left_shift", "left_control"],
 			},
 		],
 	},
@@ -202,6 +210,17 @@ fs.writeFileSync(
 						rules,
 					},
 					virtual_hid_keyboard: { keyboard_type_v2: "iso" },
+				},
+			],
+			devices: [
+				{
+					identifiers: {
+						is_keyboard: true,
+						is_pointing_device: true,
+						product_id: 545,
+						vendor_id: 13364,
+					},
+					ignore: false,
 				},
 			],
 		},
