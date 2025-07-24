@@ -6,13 +6,16 @@ set -gx PKG_CONFIG_PATH /opt/homebrew/opt/curl/lib/pkgconfig
 function vim
     set profile (cat ~/profile.txt)
     if test "$profile" = Dev
-        source ~/secrets/nvim.env && command nvim
+        source ~/secrets/nvim.env
+        command nvim $argv
     else
-        command vim
+        command vim $argv
     end
 end
+
 function nvim
-    source ~/secrets/nvim.env && command nvim
+    source ~/secrets/nvim.env
+    command nvim $argv
 end
 #alias vim="DEEPSEEK_API_KEY=$(cat ~/secrets/deepseek-token) ANTHROPIC_API_KEY=$(cat ~/secrets/anthropic-token) nvim"
 function neovide
