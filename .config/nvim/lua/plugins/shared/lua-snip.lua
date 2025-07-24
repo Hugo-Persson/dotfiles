@@ -7,7 +7,7 @@ return {
       config = function()
         -- Delay loading snippets until after InsertEnter
         vim.defer_fn(function()
-          require("luasnip.loaders.from_vscode").lazy_load()
+          require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snips" } })
           require("luasnip.loaders.from_lua").load({ paths = { "./lua/custom/snippets" } })
         end, 100)
       end,
