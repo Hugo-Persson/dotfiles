@@ -25,10 +25,6 @@ return {
 
         tinymist = {},
 
-        biome = {
-          cmd = { "npx", "biome", "lsp-proxy" },
-        },
-
         kotlin_language_server = {},
 
         marksman = {
