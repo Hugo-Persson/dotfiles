@@ -38,7 +38,7 @@ nmap ]f :action MethodDown<cr>
 nmap [g :action VcsShowPrevChangeMarker<cr> " TODO: this is not working
 nmap ]g :action VcsShowNextChangeMarker<cr> " TODO: this is not working
 
-map <leader>ra <Action>(RenameElement)
+map <leader>cr <Action>(RenameElement)
 map <leader>rr <Action>(Run)
 map <leader>rs :registers
 map <leader>t <Action>(ActivateTerminalToolWindow)
