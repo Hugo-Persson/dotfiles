@@ -57,3 +57,31 @@ vim.filetype.add({
 -- vim.opt.foldmarker = "=======,======="
 
 vim.g.db_ui_save_location = "~/.config/nvim/dadbod_ui/"
+
+-- Create a custom command to run tsc and populate the quickfix list
+vim.api.nvim_create_user_command("RunTSCQuickfix", function()
+  local cmd = "pnpm tsc --noEmit"
+  local output = vim.fn.systemlist(cmd)
+
+  -- Process the output to format it for quickfix list
+  local filtered_output = {}
+  for _, line in ipairs(output) do
+    if line:match("^||") then
+      line = line:gsub("^||%s*", "")
+    end
+    if line:match("src/.*%.ts%(") then
+      -- Extract filename, line, col and message
+      local filename, line_num, col_num, message = line:match("(.*)%((%d+),(%d+)%)%: (.*)")
+      if filename and line_num and col_num and message then
+        table.insert(filtered_output, filename .. ":" .. line_num .. ":" .. col_num .. ":" .. message)
+      end
+    end
+  end
+
+  if #filtered_output == 0 then
+    print("No TypeScript errors")
+  else
+    vim.fn.setqflist({}, "r", { title = "tsc", lines = filtered_output })
+    vim.cmd("Trouble toggle quickfix")
+  end
+end, {})

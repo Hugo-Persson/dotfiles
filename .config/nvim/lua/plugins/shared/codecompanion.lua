@@ -1,6 +1,7 @@
 return {
   {
     "olimorris/codecompanion.nvim", -- The KING of AI programming
+    event = "VeryLazy",
     dependencies = {
       "j-hui/fidget.nvim", -- Display status
       "ravitemer/codecompanion-history.nvim", -- Save and load conversation history
@@ -39,7 +40,7 @@ return {
           return require("codecompanion.adapters").extend("copilot", {
             schema = {
               model = {
-                default = "claude-sonnet-4",
+                default = "gpt-4.1",
               },
             },
           })

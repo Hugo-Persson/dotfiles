@@ -15,12 +15,16 @@ return {
     },
     opts = {
       filesystem = {
-        hide_dotfiles = false,
-        always_show = { -- remains visible even if other settings would normally hide it
-          "env",
-        },
-        always_show_by_pattern = { -- uses glob style patterns
-          ".env*",
+        filtered_items = {
+          always_show = { -- remains visible even if other settings would normally hide it
+            "env",
+            ".github",
+            ".npmrc",
+          },
+          always_show_by_pattern = { -- uses glob style patterns
+            ".env*",
+            ".github/**",
+          },
         },
         commands = {
           -- over write default 'delete' command to 'trash'.
