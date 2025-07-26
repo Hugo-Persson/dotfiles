@@ -18,7 +18,6 @@ vim.lsp.set_log_level("warn") -- or "error", "warn", "info", "debug", "trace"
 require("config.lazy")
 -- Adding .root for root detection
 vim.g.root_spec = { "lsp", { ".root", ".git", "lua" }, "cwd" }
-vim.api.nvim_command("set clipboard&vim")
 vim.g.tmux_navigator_save_on_switch = 2
 -- Load filetype detection from separate module
 require("config.filetypes")
@@ -85,3 +84,5 @@ vim.api.nvim_create_user_command("RunTSCQuickfix", function()
     vim.cmd("Trouble toggle quickfix")
   end
 end, {})
+
+vim.o.clipboard = "unnamedplus"
