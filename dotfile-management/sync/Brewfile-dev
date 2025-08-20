@@ -165,15 +165,12 @@ mas "Pages", id: 409201541
 mas "Unsplash Wallpapers", id: 1284863847
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
+
 vscode "aaron-bond.better-comments"
-vscode "adpyke.codesnap"
 vscode "albert.tabout"
-vscode "angular.ng-template"
 vscode "astro-build.astro-vscode"
 vscode "asvetliakov.vscode-neovim"
-vscode "bierner.markdown-mermaid"
 vscode "biomejs.biome"
-vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
 vscode "bradlc.vscode-tailwindcss"
 vscode "catppuccin.catppuccin-vsc"
 vscode "catppuccin.catppuccin-vsc-icons"
@@ -267,3 +264,4 @@ vscode "xaver.clang-format"
 vscode "yoavbls.pretty-ts-errors"
 vscode "yzhang.markdown-all-in-one"
 vscode "zignd.html-css-class-completion"
+vscode "folke.vscode-monorepo-workspace"
