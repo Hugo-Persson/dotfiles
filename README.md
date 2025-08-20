@@ -46,6 +46,10 @@ Here I will go more in depth about my workflow and the tools I use.
 
 ## WezTerm
 
+## MQTTX
+
+https://mqttx.app/
+
 ## CLI Tools
 
 ### [aichat](https://github.com/sigoden/aichat)
