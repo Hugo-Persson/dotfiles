@@ -3,7 +3,6 @@ raycast
 github-copilot
 thefuck/__pycache__/settings.cpython-313.pyc
 **/*.log
-tmux
 .android
 .wrangler/logs
 jgit

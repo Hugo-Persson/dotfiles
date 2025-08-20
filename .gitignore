@@ -12,6 +12,7 @@
 !scripts/
 
 !.config
+!.claude
 !dotfile-management/
 !.ssh
 !secrets/
@@ -22,4 +23,5 @@
 !scripts
 !easy-setup.sh
 .config/nvim/lua/plugins/.DS_Store
+.config/nvim/.DS_Store
 .config/nvim/.DS_Store

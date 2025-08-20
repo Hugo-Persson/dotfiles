@@ -1,6 +1,6 @@
 [user]
 	email = hugo.e.persson@gmail.com
-  name = Hugo Persson
+	name = Hugo Persson
 [include]
   path = /Users/hugo/delta/catppuccin.gitconfig
 [filter "lfs"]

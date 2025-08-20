@@ -12,6 +12,7 @@ Infisical
 JSON
 Jellyfin
 Komodo
+Lecigon
 MiniBeaconPlus
 OIDC
 Ok
@@ -31,6 +32,7 @@ api
 arg
 cron
 dup
+neverthrow
 param
 preallocate
 self-hosted
@@ -39,4 +41,3 @@ str
 trigram
 userptr
 watchOS
-TODO

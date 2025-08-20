@@ -6,11 +6,23 @@ return {
     cmd = "Neotree",
     keys = {
       {
-        "<leader>fe",
+        "<leader>eE",
         function()
           require("neo-tree.command").execute({ toggle = true, position = "float", reveal = true, dir = LazyVim.root() })
         end,
         desc = "Explorer NeoTree (Root Dir)",
+      },
+      {
+        "<leader>ee",
+        function()
+          require("neo-tree.command").execute({ toggle = true, position = "float", reveal = true, dir = vim.uv.cwd() })
+        end,
+        desc = "Explorer NeoTree (Current Dir)",
+      },
+      {
+        "<leader>eg",
+        "<cmd>Neotree float git_status <CR>",
+        desc = "Explorer NeoTree (Git Files)",
       },
     },
     opts = {
@@ -26,48 +38,48 @@ return {
             ".github/**",
           },
         },
-        commands = {
-          -- over write default 'delete' command to 'trash'.
-          delete = function(state)
-            local inputs = require("neo-tree.ui.inputs")
-            local path = state.tree:get_node().path
-            local msg = "Are you sure you want to trash " .. path
-            inputs.confirm(msg, function(confirmed)
-              if not confirmed then
-                return
-              end
-
-              vim.fn.system({ "trash", vim.fn.fnameescape(path) })
-              require("neo-tree.sources.manager").refresh(state.name)
-            end)
-          end,
-
-          -- over write default 'delete_visual' command to 'trash' x n.
-          delete_visual = function(state, selected_nodes)
-            local inputs = require("neo-tree.ui.inputs")
-
-            -- get table items count
-            function GetTableLen(tbl)
-              local len = 0
-              for n in pairs(tbl) do
-                len = len + 1
-              end
-              return len
-            end
-
-            local count = GetTableLen(selected_nodes)
-            local msg = "Are you sure you want to trash " .. count .. " files ?"
-            inputs.confirm(msg, function(confirmed)
-              if not confirmed then
-                return
-              end
-              for _, node in ipairs(selected_nodes) do
-                vim.fn.system({ "trash", vim.fn.fnameescape(node.path) })
-              end
-              require("neo-tree.sources.manager").refresh(state.name)
-            end)
-          end,
-        },
+        -- commands = {
+        --   -- over write default 'delete' command to 'trash'.
+        --   delete = function(state)
+        --     local inputs = require("neo-tree.ui.inputs")
+        --     local path = state.tree:get_node().path
+        --     local msg = "Are you sure you want to trash " .. path
+        --     inputs.confirm(msg, function(confirmed)
+        --       if not confirmed then
+        --         return
+        --       end
+        --
+        --       vim.fn.system({ "trash", vim.fn.fnameescape(path) })
+        --       require("neo-tree.sources.manager").refresh(state.name)
+        --     end)
+        --   end,
+        --
+        --   -- over write default 'delete_visual' command to 'trash' x n.
+        --   delete_visual = function(state, selected_nodes)
+        --     local inputs = require("neo-tree.ui.inputs")
+        --
+        --     -- get table items count
+        --     function GetTableLen(tbl)
+        --       local len = 0
+        --       for n in pairs(tbl) do
+        --         len = len + 1
+        --       end
+        --       return len
+        --     end
+        --
+        --     local count = GetTableLen(selected_nodes)
+        --     local msg = "Are you sure you want to trash " .. count .. " files ?"
+        --     inputs.confirm(msg, function(confirmed)
+        --       if not confirmed then
+        --         return
+        --       end
+        --       for _, node in ipairs(selected_nodes) do
+        --         vim.fn.system({ "trash", vim.fn.fnameescape(node.path) })
+        --       end
+        --       require("neo-tree.sources.manager").refresh(state.name)
+        --     end)
+        --   end,
+        -- },
       },
       window = {
         mappings = {
