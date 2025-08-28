@@ -2,3 +2,6 @@
 secrets/*
 .aws/*
 .config/aichat
+.claude.json
+.config/komodo/komodo.cli.toml
+

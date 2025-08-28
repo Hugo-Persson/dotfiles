@@ -26,6 +26,35 @@ map('n', '<leader>bo', function()
   vim.cmd('call VSCodeNotify("workbench.action.closeOtherEditors")')
 end, { desc = 'Close other tabs' })
 
+-- Folding
+map('n', 'za', function()
+  vim.cmd('call VSCodeNotify("editor.toggleFold")')
+end, { desc = 'Toggle fold' })
+
+map('n', 'zc', function()
+  vim.cmd('call VSCodeNotify("editor.fold")')
+end, { desc = 'Close fold' })
+
+map('n', 'zo', function()
+  vim.cmd('call VSCodeNotify("editor.unfold")')
+end, { desc = 'Open fold' })
+
+map('n', 'zC', function()
+  vim.cmd('call VSCodeNotify("editor.foldRecursively")')
+end, { desc = 'Close fold recursively' })
+
+map('n', 'zO', function()
+  vim.cmd('call VSCodeNotify("editor.unfoldRecursively")')
+end, { desc = 'Open fold recursively' })
+
+map('n', 'zR', function()
+  vim.cmd('call VSCodeNotify("editor.unfoldAll")')
+end, { desc = 'Open all folds' })
+
+map('n', 'zM', function()
+  vim.cmd('call VSCodeNotify("editor.foldAll")')
+end, { desc = 'Close all folds' })
+
 -- Keybinding for TypeScript files
 vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'typescript', 'typescriptreact' },
