@@ -1,0 +1,1 @@
+wtp completion fish | source

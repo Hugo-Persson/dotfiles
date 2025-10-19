@@ -7,7 +7,8 @@
 # 🌸 A command-line fuzzy finder
 # https://github.com/junegunn/fzf
 
-fzf --fish | source
+# Removed duplicate fzf loading - already loaded in fzf.fish
+# fzf --fish | source
 
 set -Ux FZF_DEFAULT_OPTS "\
 --ansi \

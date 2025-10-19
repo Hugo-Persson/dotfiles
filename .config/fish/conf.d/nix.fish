@@ -1,2 +1,1 @@
-
-export NIX_CONF_DIR=$HOME/dotfiles/nix
+export NIX_CONF_DIR=$HOME/.config/nix

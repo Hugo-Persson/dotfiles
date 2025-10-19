@@ -4,15 +4,6 @@
   # $ nix-env -qaP | grep wget
   environment = {
     systemPackages = with pkgs; [
-
-      btop
-      nixfmt-classic
-      bear
-      cscope
-      git-open
-      imagemagick
-      luajitPackages.magick
-      git-lfs
     ];
   };
   # Dock
@@ -22,7 +13,7 @@
     mru-spaces = false;
     show-recents = false;
     expose-group-apps = true;
-    tilesize = 32;
+    tilesize = 42;
   };
   system.defaults.spaces = {
     spans-displays = false;
@@ -51,8 +42,11 @@
   security.pam.enableSudoTouchIdAuth = true;
   system.defaults.NSGlobalDomain.AppleShowAllExtensions=true;
   system.defaults.NSGlobalDomain.AppleEnableMouseSwipeNavigateWithScrolls=true;
+  system.defaults.NSGlobalDomain."com.apple.keyboard.fnState" = true;
    # 120, 90, 60, 30, 12, 6, 2
-  system.defaults.NSGlobalDomain.InitialKeyRepeat = 12;
+  system.defaults.NSGlobalDomain.InitialKeyRepeat = 10;
+  # 120, 90, 60, 30, 12, 6, 2, 1
+  system.defaults.NSGlobalDomain.KeyRepeat = 1;
   system.defaults.finder.ShowPathbar = true;
   system.defaults.finder.ShowStatusBar = true;
   system.defaults.WindowManager.EnableStandardClickToShowDesktop = false;

@@ -17,13 +17,13 @@ vim.go.background = (ok and (last_theme == "light" or last_theme == "dark")) and
 -- Function to save the theme when it changes
 local function save_theme()
   vim.fn.mkdir(vim.fn.fnamemodify(theme_file, ":h"), "p")
-  vim.fn.writefile({vim.go.background}, theme_file)
+  vim.fn.writefile({ vim.go.background }, theme_file)
 end
 
 -- Save theme when it changes
 vim.api.nvim_create_autocmd("OptionSet", {
   pattern = "background",
-  callback = save_theme
+  callback = save_theme,
 })
 
 function SetTheme()
@@ -54,3 +54,5 @@ function GetColorScheme()
     return require("catppuccin.palettes").get_palette("latte")
   end
 end
+
+vim.g.copilot_nes = true

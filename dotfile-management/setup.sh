@@ -19,6 +19,8 @@ elif [ "$PROFILE" = "Server" ]; then
   ~/dotfile-management/setup/server.sh
 fi
 
+cd ~/.config/karabiner && pnpm i && pnpm build
+
 tmux source ~/.config/tmux/tmux.conf
 
 echo "Everything installed, run 'tn'  to atach to tmux then use CTRL + SPACE  -> I to install TPM plugins "

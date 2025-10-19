@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git diff:*), Bash(git log:*), Bash(git checkout:*), Bash(git branch:*), Bash(git worktree:*), Bash(git push:*), Bash(git pull:*), Linear(mcp:get_issue), Linear(mcp:create_issue), Linear(mcp:update_issue), GitHub(mcp:create_pull_request)
+allowed-tools: Bash(git:*), Bash(pnpm:add), Bash(pnpm:db:*), Bash(infisical:run:--:turbo:*), Linear(mcp:*), Linear(linear-server - update_issue), GitHub(mcp:create_pull_request)
 argument-hint: [task_id]
 description: This template helps you work on a linear task
 ---

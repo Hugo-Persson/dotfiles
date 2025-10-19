@@ -21,7 +21,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "terminal-notifier -message \"Claude Code Finished\" -sound default"
+            "command": "/Users/hugo/.claude/claude-notification.fish"
           }
         ]
       }
@@ -32,7 +32,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "terminal-notifier -message \"Claude Code Needs Help\" -sound Basso"
+            "command": "/Users/hugo/.claude/claude-notification.fish"
           }
         ]
       }
@@ -42,5 +42,5 @@
     "type": "command",
     "command": "pnpx  @owloops/claude-powerline@latest --style=powerline"
   },
-  "model": "opusplan"
+  "alwaysThinkingEnabled": true
 }

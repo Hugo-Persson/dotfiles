@@ -22,3 +22,6 @@
 !.local/share/yadm/archive
 !scripts
 !easy-setup.sh
+.claude/.DS_Store
+.config/karabiner/automatic_backups
+dotfile-management/sync/node_modules
