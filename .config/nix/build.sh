@@ -1,2 +1,2 @@
 #!/bin/zsh
-darwin-rebuild switch --flake .
+sudo darwin-rebuild switch --flake .

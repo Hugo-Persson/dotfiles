@@ -22,6 +22,6 @@
 !.local/share/yadm/archive
 !scripts
 !easy-setup.sh
-.config/nvim/lua/plugins/.DS_Store
-.config/nvim/.DS_Store
-.config/nvim/.DS_Store
+.claude/.DS_Store
+.config/karabiner/automatic_backups
+dotfile-management/sync/node_modules

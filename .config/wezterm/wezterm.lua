@@ -34,8 +34,8 @@ local config = {
   font_size = 13,
 
   line_height = 1.1,
-  --font = wezterm.font_with_fallback({ "JetBrains Mono", "JetBrainsMono Nerd Font Mono" }),
-  font = wezterm.font("JetBrainsMono Nerd Font Mono"),
+  font = wezterm.font_with_fallback({ "Monaspace Neon NF", "JetBrainsMono Nerd Font Mono" }),
+  -- font = wezterm.font("Monaspace Neon NF"),
 
   color_scheme = cs.get_color_scheme(),
 

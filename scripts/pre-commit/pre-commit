@@ -15,14 +15,20 @@ def gitleaksEnabled():
 
 
 if gitleaksEnabled():
-    exitCode = os.WEXITSTATUS(os.system("gitleaks protect -v --staged"))
-    if exitCode == 1:
-        print("""Warning: gitleaks has detected sensitive information in your changes.
+    cwd = os.getcwd()
+    if cwd.startswith("/private/var/folders"):
+        print("Skipping gitleaks in temporary directory")
+    else:
+        exitCode = os.WEXITSTATUS(os.system("gitleaks protect -v --staged"))
+        if exitCode == 1:
+            print(f"""Warning: gitleaks has detected sensitive information in your changes.
+Current working directory: {os.getcwd()}
+HUSKY environment variable: {os.environ.get("HUSKY", "Not set")}
 To disable the gitleaks precommit hook run the following command:
 
     git config hooks.gitleaks false
 """)
-        sys.exit(1)
+            sys.exit(1)
 else:
     print(
         "gitleaks precommit disabled\

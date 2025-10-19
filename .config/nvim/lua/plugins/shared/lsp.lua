@@ -7,7 +7,7 @@ return {
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
-        fish_lsp = {},
+        --fish_lsp = {},
         docker_compose_language_service = {},
         harper_ls = {
           settings = {

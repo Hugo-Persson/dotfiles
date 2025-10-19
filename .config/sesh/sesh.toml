@@ -3,18 +3,15 @@ sort_order = ["Nordic Kinetics 🧑‍⚕️"]
 blacklist = ["scratch"]
 [[session]]
 name = "Nordic Kinetics 🧑‍⚕️"
-path = "~/sine/nordic-kinetics"
-windows = ["ui", "web", "app"]
+path = "~/nk/nordic-kinetics"
+windows = ["web", "app"]
 
 [[window]]
-name = "ui"
-startup_script = "pnpm turbo @nk/ui#dev"
-[[window]]
 name = "web"
-path = "~/sine/nordic-kinetics/apps/web/"
+path = "~/nk/nordic-kinetics"
 [[window]]
 name = "app"
-path = "~/sine/nordic-kinetics/apps/app/"
+path = "~/nk/nordic-kinetics"
 
 
 [[session]]

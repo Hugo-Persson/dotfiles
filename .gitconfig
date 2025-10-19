@@ -11,7 +11,7 @@
 [push]
 	autoSetupRemote = true
 [pull]
-  rebase = false
+	rebase = false
 [log]
     abbrevCommit = true  # short commits
     graphColors = blue,yellow,cyan,magenta,green,red
@@ -53,7 +53,10 @@
 [credential]
   helper = store
 
-[url "ssh://git@github.com/"]
-    insteadOf = https://github.com/
+; [url "ssh://git@github.com/"]
+;     insteadOf = https://github.com/
 [url "ssh://git@gitlab.combain.com"]
     insteadOf = https://gitlab.combain.com
+[lfs]
+	sshtransfer = never
+	locksverify = false
