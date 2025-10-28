@@ -1,4 +1,3 @@
-tap "homebrew/bundle"
 tap "hugo-persson/dns-cli-tools"
 tap "infisical/get-cli"
 tap "jesseduffield/lazydocker"
