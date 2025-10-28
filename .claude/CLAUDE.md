@@ -1,6 +1,7 @@
+# TypeScript
 
-# Typescript rules
-See 
+If writing TypeScript, please follow the rule:
+
 - @ts-rules/any-inside-generic-functions.md
 - @ts-rules/default-exports.md
 - @ts-rules/discriminated-unions.md
@@ -15,3 +16,11 @@ See
 - @ts-rules/readonly-properties.md
 - @ts-rules/return-types.md
 - @ts-rules/throwing.md
+
+# Shell scripts
+
+If writing shell scripts, please:
+
+- Use `fish`
+- Use `gum` for interactive prompts
+

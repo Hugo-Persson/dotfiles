@@ -78,6 +78,7 @@ let sublayers: SubLayerConfig = {
     w: app("WezTerm"),
     x: app("Xcode"),
     m: app("Mail"),
+    a: open("raycast://script-commands/open-last-claude-code"),
     c: open("raycast://extensions/thomas/visual-studio-code/index"),
   },
   a: {
@@ -95,10 +96,11 @@ let sublayers: SubLayerConfig = {
 
   // s = "System"
   s: systemSublayer,
+  v: open("raycast://extensions/hugo/latex-ocr/extract-markdown"),
 
   // v = "moVe" which isn't "m" because we want it to be on the left hand
   // so that hjkl work like they do in vim
-  v: moveSubLayer,
+  //v: moveSubLayer,
 
   // c = Musi*c* which isn't "m" because we want it to be on the left hand
   c: codeSubLayer,
@@ -224,17 +226,19 @@ fs.writeFileSync(
           virtual_hid_keyboard: { keyboard_type_v2: "iso" },
         },
       ],
-      devices: [
+      "devices": [
         {
-          identifiers: {
-            is_keyboard: true,
-            is_pointing_device: true,
-            product_id: 545,
-            vendor_id: 13364,
+          "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": true,
+            "product_id": 545,
+            "vendor_id": 13364
           },
-          ignore: false,
-        },
+          "ignore": false
+        }
       ],
+      "name": "Default",
+      "virtual_hid_keyboard": { "keyboard_type_v2": "iso" }
     },
     null,
     2,

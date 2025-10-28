@@ -264,3 +264,25 @@ run = "layout floating"
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.toolbox'
 run = "layout floating"
+[[on-window-detected]]
+if.app-id = 'art.ginzburg.MiddleClick'
+run = "layout floating"
+[[on-window-detected]]
+if.app-id = 'com.unsplash.Wallpapers '
+run = "layout floating"
+[[on-window-detected]]
+if.app-id = 'ch.protonmail.drive'
+run = "layout floating"
+[[on-window-detected]]
+if.app-id = 'pro.betterdisplay.BetterDisplay'
+run = "layout floating"
+[[on-window-detected]]
+if.app-id = 'software.micropixels.BatFi'
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = 'simulator'
+run = ['layout tiling', 'move-node-to-workspace X']
+# [[on-window-detected]]
+# if.app-id = 'com.apple.dt.Xcode'
+# run = ['layout tiling', 'move-node-to-workspace X']
