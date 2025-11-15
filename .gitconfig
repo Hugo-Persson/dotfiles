@@ -24,7 +24,7 @@
     diffFilter = delta --color-only
 
 [delta]
-	features = line-numbers decorations catppuccin-latte
+	features = line-numbers decorations catppuccin-mocha
 	navigate = true
   whitespace-error-style = 22 reverse
 [delta "decorations"]
@@ -60,3 +60,5 @@
 [lfs]
 	sshtransfer = never
 	locksverify = false
+[coderabbit]
+	machineId = cli/0b497d1abd0a40d29a23b09a85348e92

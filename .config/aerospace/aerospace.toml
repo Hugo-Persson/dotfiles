@@ -116,8 +116,6 @@ alt-o = 'workspace O'       # Obsidian
 alt-w = "workspace W"       # WezTerm
 alt-p = "workspace P"       # Postman
 alt-t = "workspace T"       # Tasks
-alt-space = 'workspace GPT'
-#cmd-alt-ctrl-shift-space = 'workspace GPT'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -133,7 +131,6 @@ alt-shift-o = 'move-node-to-workspace O'
 alt-shift-w = 'move-node-to-workspace W'
 alt-shift-p = 'move-node-to-workspace P'
 alt-shift-t = 'move-node-to-workspace T'
-alt-shift-space = 'move-node-to-workspace GPT'
 
 alt-shift-f = 'fullscreen'
 
@@ -189,13 +186,7 @@ run = "move-node-to-workspace W"
 # if.app-id = 'company.thebrowser.Browser'
 # run = "move-node-to-workspace B"
 
-[[on-window-detected]]
-if.app-id = 'com.openai.chat'
-run = "move-node-to-workspace GPT"
 
-[[on-window-detected]]
-if.app-id = 'ai.perplexity.mac'
-run = "move-node-to-workspace GPT"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.dt.Xcode '
@@ -278,6 +269,9 @@ if.app-id = 'pro.betterdisplay.BetterDisplay'
 run = "layout floating"
 [[on-window-detected]]
 if.app-id = 'software.micropixels.BatFi'
+run = "layout floating"
+[[on-window-detected]]
+if.app-id = 'com.autodesk.fusion360'
 run = "layout floating"
 
 [[on-window-detected]]

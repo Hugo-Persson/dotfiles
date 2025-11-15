@@ -22,9 +22,8 @@ function cwk --description "Setup git worktree and work on issue with claude cod
         echo "Failed to create worktree"
         return 1
     end
-    # Set worktree directory
-    set worktree_dir (pwd)
 
+    # Set worktree directory
     # Create tmux session with first window in worktree directory
     tmux new-session -d -s $session_name -c "$worktree_dir" -n claude
     tmux send-keys -t $session_name:claude claude C-m

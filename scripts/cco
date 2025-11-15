@@ -1,0 +1,4 @@
+#!/bin/bash
+
+open -a WezTerm.app
+sesh connect --switch $(cat ~/.last-claude)

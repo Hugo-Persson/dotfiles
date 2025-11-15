@@ -1,0 +1,12 @@
+clouds:
+  xerces:
+    auth:
+      auth_url: https://xerces.ericsson.net:5000
+      project_name: FRTN90-group29
+      username: erucht057
+      password: P0xua2oj0lw6
+      user_domain_name: xerces
+      project_domain_id: 99882e968d0b44308e7ac01e78af2163
+  region_name: RegionOne
+  interface: public
+  identity_api_version: 3

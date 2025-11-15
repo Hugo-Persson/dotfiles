@@ -3,6 +3,7 @@ if status is-interactive
 end
 
 export PATH="$PATH:$HOME/.local/bin"
+export DYLD_LIBRARY_PATH=/opt/homebrew/lib
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
