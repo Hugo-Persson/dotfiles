@@ -273,6 +273,9 @@ run = "layout floating"
 [[on-window-detected]]
 if.app-id = 'com.autodesk.fusion360'
 run = "layout floating"
+[[on-window-detected]]
+if.app-id = 'com.okta.mobile '
+run = "layout floating"
 
 [[on-window-detected]]
 if.app-id = 'simulator'
