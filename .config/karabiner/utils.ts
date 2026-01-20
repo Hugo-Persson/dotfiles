@@ -1,4 +1,3 @@
-import { baseCheatSheet } from "./rules";
 import { KarabinerRules, KeyCode, Manipulator, To } from "./types";
 
 type DelayedAction = {
@@ -20,18 +19,6 @@ export type HyperKeySublayer = {
   // The ? is necessary, otherwise we'd have to define something for _every_ key code
   [key_code in KeyCode]?: LayerCommand;
 };
-
-function sublayerCheatSheet(
-  sublayerName: string,
-  commands: HyperKeySublayer,
-): string {
-  return `Hyper + ${sublayerName} sublayer:
-${Object.entries(commands)
-      .map(
-        ([key, command]) => `- ${key}: ${command.description || "No description"}`,
-      )
-      .join("\n")}`;
-}
 
 /**
  * Create a Hyper Key sublayer, where every command is prefixed with a key
@@ -65,36 +52,12 @@ export function createHyperSubLayer(
             value: 0,
           },
         },
-        {
-          set_notification_message: {
-            id: subLayerVariableName,
-            text: ``,
-          },
-        },
-        {
-          set_notification_message: {
-            text: baseCheatSheet,
-            id: "hyper_cheat_sheet",
-          },
-        },
       ],
       to: [
         {
           set_variable: {
             name: subLayerVariableName,
             value: 1,
-          },
-        },
-        {
-          set_notification_message: {
-            id: subLayerVariableName,
-            text: sublayerCheatSheet(sublayer_key, commands),
-          },
-        },
-        {
-          set_notification_message: {
-            text: "",
-            id: "hyper_cheat_sheet",
           },
         },
       ],

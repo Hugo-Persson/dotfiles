@@ -126,10 +126,6 @@ let sublayers: SubLayerConfig = {
   },
 };
 
-export const baseCheatSheet: string = `Hyper Key Cheat Sheet:
-${Object.entries(sublayers)
-    .map(([key, command]) => `- ${key}`)
-    .join("\n")}`;
 const propegateSublayers = propegateKeyCodes.reduce(
   (acc, key) => ({
     ...acc,
@@ -162,24 +158,12 @@ const rules: KarabinerRules[] = [
               value: 1,
             },
           },
-          {
-            set_notification_message: {
-              text: baseCheatSheet,
-              id: "hyper_cheat_sheet",
-            },
-          },
         ],
         to_after_key_up: [
           {
             set_variable: {
               name: "hyper",
               value: 0,
-            },
-          },
-          {
-            set_notification_message: {
-              text: "",
-              id: "hyper_cheat_sheet",
             },
           },
         ],
