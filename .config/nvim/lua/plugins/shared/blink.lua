@@ -1,6 +1,7 @@
 return {
   {
     "saghen/blink.cmp",
+    build = "cargo build --release",
     event = "InsertEnter", -- Only load when entering insert mode
     dependencies = {
       "Kaiser-Yang/blink-cmp-avante",

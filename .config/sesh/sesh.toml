@@ -1,6 +1,19 @@
 # open the file manager
-
+sort_order = ["Nordic Kinetics 🧑‍⚕️"]
 blacklist = ["scratch"]
+[[session]]
+name = "Nordic Kinetics 🧑‍⚕️"
+path = "~/nk/nordic-kinetics"
+windows = ["web", "app"]
+
+[[window]]
+name = "web"
+path = "~/nk/nordic-kinetics"
+[[window]]
+name = "app"
+path = "~/nk/nordic-kinetics"
+
+
 [[session]]
 name = "Downloads 📥"
 path = "~/Downloads"
@@ -27,6 +40,10 @@ name = "Wezterm 🖥️"
 path = "~/.config/wezterm/"
 startup_command = "nvim wezterm.lua"
 
+[[session]]
+name = "Aerospace ✈️"
+path = "~/.config/aerospace/"
+startup_command = "nvim aerospace.toml"
 [[session]]
 name = "Multi Host Router 🚧"
 path = "~/my-projects/traefik-multi-host-mapper/"

@@ -1,6 +1,6 @@
 [user]
 	email = hugo.e.persson@gmail.com
-  name = Hugo Persson
+	name = Hugo Persson
 [include]
   path = /Users/hugo/delta/catppuccin.gitconfig
 [filter "lfs"]
@@ -11,7 +11,7 @@
 [push]
 	autoSetupRemote = true
 [pull]
-  rebase = false
+	rebase = false
 [log]
     abbrevCommit = true  # short commits
     graphColors = blue,yellow,cyan,magenta,green,red
@@ -24,7 +24,7 @@
     diffFilter = delta --color-only
 
 [delta]
-	features = line-numbers decorations catppuccin-latte
+	features = line-numbers decorations catppuccin-mocha
 	navigate = true
   whitespace-error-style = 22 reverse
 [delta "decorations"]
@@ -53,7 +53,12 @@
 [credential]
   helper = store
 
-[url "ssh://git@github.com/"]
-    insteadOf = https://github.com/
+; [url "ssh://git@github.com/"]
+;     insteadOf = https://github.com/
 [url "ssh://git@gitlab.combain.com"]
     insteadOf = https://gitlab.combain.com
+[lfs]
+	sshtransfer = never
+	locksverify = false
+[coderabbit]
+	machineId = cli/0b497d1abd0a40d29a23b09a85348e92

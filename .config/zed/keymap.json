@@ -1,0 +1,36 @@
+[
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "space a": "editor::SelectAll",
+      "space y": "editor::Copy",
+      "space c p": "editor::CopyPath",
+      "space c o": "editor::OrganizeImports",
+      "space c R": "editor::Rename",
+      "space c a": "editor::ToggleCodeActions",
+      "space g b": "editor::ToggleGitBlame"
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "space p": ["workspace::SendKeystrokes", "\" _ d P"],
+      "space m b": ["workspace::SendKeystrokes", "v i w c * * ctrl-r \" * *"],
+      "space m c": ["workspace::SendKeystrokes", "v i w c ` ctrl-r \" `"],
+      "space m d": ["workspace::SendKeystrokes", "I - space"],
+      "space m t": ["workspace::SendKeystrokes", "I - space [ ] space"],
+      "space m p": "markdown::OpenPreview"
+    }
+  },
+  {
+    "context": "vim_mode == visual && !menu",
+    "bindings": {
+      "space m b": ["workspace::SendKeystrokes", "c * * ctrl-r \" * *"],
+      "space m c": ["workspace::SendKeystrokes", "c ` ctrl-r \" `"]
+    }
+  }
+]

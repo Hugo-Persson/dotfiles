@@ -3,7 +3,12 @@ if status is-interactive
 end
 
 export PATH="$PATH:$HOME/.local/bin"
+export DYLD_LIBRARY_PATH=/opt/homebrew/lib
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :

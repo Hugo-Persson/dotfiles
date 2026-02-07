@@ -23,7 +23,7 @@ fi
 
 echo "Installing tpm"
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
-  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
 else
   echo "tpm already installed"
 fi
@@ -40,3 +40,4 @@ pnpm install -g @microsoft/compose-language-service
 #curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 
 gh extension install github/gh-copilot
+pnpm install -g @anthropic-ai/claude-code

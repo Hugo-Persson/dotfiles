@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "Bash(hyperfine:*)",
+      "Bash(~/.tmux/plugins/tpm/bin/install_plugins:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -70,6 +70,7 @@ return {
       end,
       integrations = {
         aerial = true,
+        bufferline = true,
         diffview = true,
         alpha = true,
         --cmp = true,

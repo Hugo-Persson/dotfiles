@@ -46,6 +46,10 @@ Here I will go more in depth about my workflow and the tools I use.
 
 ## WezTerm
 
+## MQTTX
+
+https://mqttx.app/
+
 ## CLI Tools
 
 ### [aichat](https://github.com/sigoden/aichat)
@@ -333,10 +337,6 @@ Open source secret management platform
 
 MongoDB database tools
 
-### [tuist](https://github.com/tuist/tuist)
-
-Create, maintain, and interact with Xcode projects at scale
-
 https://github.com/jhspetersson/fselect
 
-https://github.com/hrkfdn/ncspot
+https://github.com/tbillington/kondo

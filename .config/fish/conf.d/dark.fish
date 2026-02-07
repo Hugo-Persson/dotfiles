@@ -191,13 +191,34 @@ function evalTmuxTheme
     echo "source $HOME/.config/tmux/catppuccin-$(getTmuxTheme).conf" >~/.config/tmux/tmux.conf.theme
 end
 
+# Cache theme detection to avoid repeated calls
+set -g _cached_theme (getTheme)
+
 if [ "$(isDarkMode)" -eq 1 ]
     git config --global delta.features "line-numbers decorations catppuccin-mocha"
     export AICHAT_LIGHT_THEME=false
-
 else
     git config --global delta.features "line-numbers decorations catppuccin-latte"
     export AICHAT_LIGHT_THEME=true
 end
+
+# Create a function to sync claude theme lazily when needed
+function sync_claude_theme --description "Sync claude theme with system"
+    if [ "$(isDarkMode)" -eq 1 ]
+        claude config set -g theme dark &
+    else
+        claude config set -g theme light &
+    end
+end
+
+# Only sync claude theme if claude command is used
+# function claude
+#     # Sync theme on first use (remove function after first call)
+#     if functions -q sync_claude_theme
+#         functions -e sync_claude_theme
+#     end
+#     command claude $argv
+# end
+# In config.fish
 
 evalTmuxTheme

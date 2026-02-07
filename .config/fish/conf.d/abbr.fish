@@ -1,4 +1,5 @@
 abbr d dev
+abbr c claude
 abbr dc "docker compose"
 abbr dcd "docker compose down"
 abbr dcdv "docker compose down -v"
@@ -46,3 +47,5 @@ abbr - "cd -"
 abbr tn "tmux new -s (pwd | sed 's/.*\///g')"
 
 abbr ds "open -a Dropshelf"
+
+abbr dtree tree -L 2 -I 'expo-apple-targets|node_modules|data'

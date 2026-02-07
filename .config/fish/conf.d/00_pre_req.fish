@@ -1,15 +1,20 @@
-
-if test (uname) = Linux
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-else
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+# Cache brew shellenv output to avoid repeated calls
+if not set -q _brew_shellenv_cached
+    if test (uname) = Linux
+        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    else
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+    end
+    set -g _brew_shellenv_cached 1
 end
 
-
 source ~/.config/fish/aliases.fish
-zoxide init fish | source
+
+# Keep starship immediate as it's needed for prompt
 starship init fish | source
-fzf --fish | source
+
+# Remove fzf from here as it's already loaded in fzf.fish
+# fzf --fish | source
 
 # pnpm
 set -gx PNPM_HOME /Users/hugo/Library/pnpm

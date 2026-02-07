@@ -116,7 +116,6 @@ function getSpec()
   table.insert(s, {
     { import = "plugins", priority = 50 },
     { import = "plugins.dev", priority = 40 },
-    { import = "plugins.shared", priority = 30 },
   })
 
   -- Debug: Write to a file

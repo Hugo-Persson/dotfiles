@@ -1,0 +1,63 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const { globSync } = require('glob');
+
+// Find every CLAUDE.md and create/update a sibling AGENT.md with identical content
+(function main() {
+  try {
+    const matches = globSync('**/CLAUDE.md', {
+      dot: true,
+      nodir: true,
+      // Exclude common heavy or irrelevant folders
+      ignore: [
+        '**/node_modules/**',
+        '**/.git/**',
+        '**/.turbo/**',
+      ],
+    });
+
+    if (matches.length === 0) {
+      console.log('No CLAUDE.md files found.');
+      process.exit(0);
+    }
+
+    let updated = 0;
+    let skipped = 0;
+    for (const claudePath of matches) {
+      const dir = path.dirname(claudePath);
+      const agentPath = path.join(dir, 'AGENT.md');
+
+      let content;
+      try {
+        content = fs.readFileSync(claudePath, 'utf8');
+      } catch (readErr) {
+        console.warn(`Skipping unreadable file: ${claudePath}:`, readErr.message);
+        skipped++;
+        continue;
+      }
+
+      try {
+        const existing = fs.existsSync(agentPath)
+          ? fs.readFileSync(agentPath, 'utf8')
+          : null;
+        if (existing === content) {
+          // Up-to-date
+          continue;
+        }
+        fs.writeFileSync(agentPath, content, 'utf8');
+        updated++;
+        console.log(`Wrote ${agentPath}`);
+      } catch (writeErr) {
+        console.warn(`Failed writing ${agentPath}:`, writeErr.message);
+        skipped++;
+      }
+    }
+
+    console.log(`Done. Updated: ${updated}, Skipped: ${skipped}, Total CLAUDE.md: ${matches.length}`);
+  } catch (err) {
+    console.error('generate-agent-md failed:', err);
+    process.exit(1);
+  }
+})();
