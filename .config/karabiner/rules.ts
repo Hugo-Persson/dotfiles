@@ -107,29 +107,15 @@ let sublayers: SubLayerConfig = {
 
   // r = "Raycast"
   r: {
-    c: open("raycast://extensions/thomas/color-picker/pick-color"),
-    n: open("raycast://script-commands/dismiss-notifications"),
-    l: open(
-      "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink",
-    ),
-    e: open("raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"),
-    p: open("raycast://extensions/raycast/raycast/confetti"),
-    a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
-    s: open("raycast://extensions/peduarte/silent-mention/index"),
-    h: open("raycast://extensions/Alex_/http-status-codes/index"),
-    1: open(
-      "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1",
-    ),
-    2: open(
-      "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2",
-    ),
+    to: [
+      {
+        key_code: "r",
+        modifiers: ["left_control"],
+      },
+    ],
   },
 };
 
-export const baseCheatSheet: string = `Hyper Key Cheat Sheet:
-${Object.entries(sublayers)
-    .map(([key, command]) => `- ${key}`)
-    .join("\n")}`;
 const propegateSublayers = propegateKeyCodes.reduce(
   (acc, key) => ({
     ...acc,
@@ -162,24 +148,12 @@ const rules: KarabinerRules[] = [
               value: 1,
             },
           },
-          {
-            set_notification_message: {
-              text: baseCheatSheet,
-              id: "hyper_cheat_sheet",
-            },
-          },
         ],
         to_after_key_up: [
           {
             set_variable: {
               name: "hyper",
               value: 0,
-            },
-          },
-          {
-            set_notification_message: {
-              text: "",
-              id: "hyper_cheat_sheet",
             },
           },
         ],
@@ -238,7 +212,7 @@ fs.writeFileSync(
         }
       ],
       "name": "Default",
-      "virtual_hid_keyboard": { "keyboard_type_v2": "iso" }
+      "virtual_hid_keyboard": { "keyboard_type_v2": "ansii" }
     },
     null,
     2,

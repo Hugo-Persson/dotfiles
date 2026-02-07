@@ -1,0 +1,36 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "show_completions_on_input": false,
+  "lsp": {
+    "biome": {
+      "binary": {
+        "path": "/var/biome-2.2.3/bin/biome",
+        "arguments": ["lsp-proxy"],
+      },
+    },
+  },
+  "languages": {
+    "JavaScript": { "formatter": { "language_server": { "name": "biome" } } },
+    "TypeScript": { "formatter": { "language_server": { "name": "biome" } } },
+    "TSX": { "formatter": { "language_server": { "name": "biome" } } },
+    "JSON": { "formatter": { "language_server": { "name": "biome" } } },
+    "JSONC": { "formatter": { "language_server": { "name": "biome" } } },
+    "CSS": { "formatter": { "language_server": { "name": "biome" } } },
+  },
+  "buffer_font_family": "Monaspace Neon NF",
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "One Dark",
+  },
+}

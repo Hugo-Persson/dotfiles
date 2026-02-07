@@ -1,5 +1,6 @@
 {
   "banner": "never",
+  "render_markdown": true,
   "theme": "auto",
   "trusted_folders": [
     "/Users/hugo/arkad/arkad-app-flutter"

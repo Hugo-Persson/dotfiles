@@ -60,22 +60,22 @@ return {
             { icon = " ", key = "q", desc = "Quit", action = ":qa" },
           },
         },
-        sections = {
-          {
-            section = "terminal",
-            cmd = "lolcat --seed=24 ~/.config/nvim/static/neovim.cat",
-            indent = -5,
-            height = 8,
-            width = 69,
-            padding = 1,
-          },
-          {
-            section = "keys",
-            indent = 1,
-            padding = 1,
-          },
-          { section = "startup" },
-        },
+        -- sections = {
+        --   {
+        --     section = "terminal",
+        --     cmd = "lolcat --seed=24 ~/.config/nvim/static/neovim.cat",
+        --     indent = -5,
+        --     height = 8,
+        --     width = 69,
+        --     padding = 1,
+        --   },
+        --   {
+        --     section = "keys",
+        --     indent = 1,
+        --     padding = 1,
+        --   },
+        --   { section = "startup" },
+        -- },
       },
       indent = {
         enabled = true,
