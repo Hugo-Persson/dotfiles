@@ -41,3 +41,4 @@ pnpm install -g @microsoft/compose-language-service
 
 gh extension install github/gh-copilot
 pnpm install -g @anthropic-ai/claude-code
+fisher install g-plane/pnpm-shell-completion
