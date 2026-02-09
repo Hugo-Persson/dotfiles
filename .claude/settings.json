@@ -42,5 +42,9 @@
     "type": "command",
     "command": "pnpx  @owloops/claude-powerline@latest --style=powerline"
   },
+  "enabledPlugins": {
+    "swift-lsp@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true
+  },
   "alwaysThinkingEnabled": true
 }
