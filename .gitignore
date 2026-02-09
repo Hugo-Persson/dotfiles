@@ -25,3 +25,4 @@
 .claude/.DS_Store
 .config/karabiner/automatic_backups
 dotfile-management/sync/node_modules
+.config/zed/prompts/prompts-library-db.0.mdb
