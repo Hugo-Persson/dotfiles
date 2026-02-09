@@ -14,6 +14,11 @@
     show-recents = false;
     expose-group-apps = true;
     tilesize = 42;
+    persistent-apps = [
+      "/Applications/Helium.app"
+      "/Applications/WezTerm.app"
+      "/System/Applications/Mail.app"
+    ];
   };
   system.defaults.spaces = {
     spans-displays = false;
@@ -40,16 +45,20 @@
   #   /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
   # '';
   security.pam.enableSudoTouchIdAuth = true;
+  system.defaults.NSGlobalDomain = {
+    ApplePressAndHoldEnabled = false;
+  };
   system.defaults.NSGlobalDomain.AppleShowAllExtensions=true;
   system.defaults.NSGlobalDomain.AppleEnableMouseSwipeNavigateWithScrolls=true;
   system.defaults.NSGlobalDomain."com.apple.keyboard.fnState" = true;
    # 120, 90, 60, 30, 12, 6, 2
   system.defaults.NSGlobalDomain.InitialKeyRepeat = 30;
   # 120, 90, 60, 30, 12, 6, 2, 1
-  system.defaults.NSGlobalDomain.KeyRepeat = 1;
+  system.defaults.NSGlobalDomain.KeyRepeat = 2;
   system.defaults.finder.ShowPathbar = true;
   system.defaults.finder.ShowStatusBar = true;
   system.defaults.WindowManager.EnableStandardClickToShowDesktop = false;
+  system.defaults.controlcenter.BatteryShowPercentage = true;
   # Whether to automatically rearrange spaces based on most recent use. The default is true.
 
   system.defaults.CustomUserPreferences = {

@@ -10,7 +10,10 @@
             "ignore": false
         }
     ],
-    "global": { "show_in_menu_bar": false },
+    "global": {
+        "enable_notification_window": false,
+        "show_in_menu_bar": false
+    },
     "name": "Default",
     "profiles": [
         {
@@ -23,7 +26,11 @@
                                 "description": "Caps Lock -> Hyper Key",
                                 "from": {
                                     "key_code": "caps_lock",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -41,7 +48,11 @@
                                         }
                                     }
                                 ],
-                                "to_if_alone": [{ "key_code": "escape" }],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -175,12 +186,21 @@
                                 "description": "Propegate",
                                 "from": {
                                     "key_code": "1",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "1",
-                                        "modifiers": ["left_control", "left_option", "left_shift", "left_command"]
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option",
+                                            "left_shift",
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -316,12 +336,21 @@
                                 "description": "Propegate",
                                 "from": {
                                     "key_code": "2",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "2",
-                                        "modifiers": ["left_control", "left_option", "left_shift", "left_command"]
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option",
+                                            "left_shift",
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -457,12 +486,21 @@
                                 "description": "Propegate",
                                 "from": {
                                     "key_code": "3",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "3",
-                                        "modifiers": ["left_control", "left_option", "left_shift", "left_command"]
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option",
+                                            "left_shift",
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -598,12 +636,21 @@
                                 "description": "Propegate",
                                 "from": {
                                     "key_code": "4",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "4",
-                                        "modifiers": ["left_control", "left_option", "left_shift", "left_command"]
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option",
+                                            "left_shift",
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -739,12 +786,21 @@
                                 "description": "Propegate",
                                 "from": {
                                     "key_code": "5",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "5",
-                                        "modifiers": ["left_control", "left_option", "left_shift", "left_command"]
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option",
+                                            "left_shift",
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -880,14 +936,24 @@
                                 "description": "Focus Zen Browser and send CMD+2",
                                 "from": {
                                     "key_code": "spacebar",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open -a 'Zen Browser.app'" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -a 'Zen Browser.app'"
+                                    }
+                                ],
                                 "to_delayed_action": {
                                     "to_if_invoked": [
                                         {
                                             "key_code": "2",
-                                            "modifiers": ["left_command"]
+                                            "modifiers": [
+                                                "left_command"
+                                            ]
                                         }
                                     ]
                                 },
@@ -1023,9 +1089,17 @@
                                 ],
                                 "from": {
                                     "key_code": "q",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "key_code": "caps_lock" }],
+                                "to": [
+                                    {
+                                        "key_code": "caps_lock"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -1159,9 +1233,17 @@
                                 "description": "Open raycast://extensions/jomifepe/bitwarden/search",
                                 "from": {
                                     "key_code": "p",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open raycast://extensions/jomifepe/bitwarden/search" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open raycast://extensions/jomifepe/bitwarden/search"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -1295,9 +1377,17 @@
                                 "description": "Open raycast://extensions/jomifepe/bitwarden/generate-password",
                                 "from": {
                                     "key_code": "g",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open raycast://extensions/jomifepe/bitwarden/generate-password" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open raycast://extensions/jomifepe/bitwarden/generate-password"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -1426,7 +1516,11 @@
                                 "description": "Toggle Hyper sublayer b",
                                 "from": {
                                     "key_code": "b",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -1457,9 +1551,17 @@
                                 "description": "Open https://twitter.com",
                                 "from": {
                                     "key_code": "t",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open https://twitter.com" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open https://twitter.com"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -1473,9 +1575,17 @@
                                 "description": "Open https://news.ycombinator.com",
                                 "from": {
                                     "key_code": "y",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open https://news.ycombinator.com" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open https://news.ycombinator.com"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -1489,9 +1599,17 @@
                                 "description": "Open https://facebook.com",
                                 "from": {
                                     "key_code": "f",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open https://facebook.com" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open https://facebook.com"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -1505,9 +1623,17 @@
                                 "description": "Open https://www.messenger.com",
                                 "from": {
                                     "key_code": "m",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open https://www.messenger.com" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open https://www.messenger.com"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -1521,9 +1647,17 @@
                                 "description": "Open https://reddit.com",
                                 "from": {
                                     "key_code": "r",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open https://reddit.com" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open https://reddit.com"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -1652,7 +1786,11 @@
                                 "description": "Toggle Hyper sublayer o",
                                 "from": {
                                     "key_code": "o",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -1683,9 +1821,17 @@
                                 "description": "Open -a 'Zen Browser.app'",
                                 "from": {
                                     "key_code": "b",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open -a 'Zen Browser.app'" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -a 'Zen Browser.app'"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -1699,9 +1845,17 @@
                                 "description": "Open -a 'Legcord.app'",
                                 "from": {
                                     "key_code": "d",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open -a 'Legcord.app'" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -a 'Legcord.app'"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -1715,9 +1869,17 @@
                                 "description": "Open -a 'WezTerm.app'",
                                 "from": {
                                     "key_code": "t",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open -a 'WezTerm.app'" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -a 'WezTerm.app'"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -1731,9 +1893,17 @@
                                 "description": "Open -a 'Finder.app'",
                                 "from": {
                                     "key_code": "f",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open -a 'Finder.app'" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -a 'Finder.app'"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -1747,9 +1917,17 @@
                                 "description": "Open -a 'Spotify.app'",
                                 "from": {
                                     "key_code": "s",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open -a 'Spotify.app'" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -a 'Spotify.app'"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -1763,9 +1941,17 @@
                                 "description": "Open -a 'WezTerm.app'",
                                 "from": {
                                     "key_code": "w",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open -a 'WezTerm.app'" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -a 'WezTerm.app'"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -1779,9 +1965,17 @@
                                 "description": "Open -a 'Xcode.app'",
                                 "from": {
                                     "key_code": "x",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open -a 'Xcode.app'" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -a 'Xcode.app'"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -1795,9 +1989,17 @@
                                 "description": "Open -a 'Mail.app'",
                                 "from": {
                                     "key_code": "m",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open -a 'Mail.app'" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -a 'Mail.app'"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -1811,9 +2013,17 @@
                                 "description": "Open raycast://script-commands/open-last-claude-code",
                                 "from": {
                                     "key_code": "a",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open raycast://script-commands/open-last-claude-code" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open raycast://script-commands/open-last-claude-code"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -1827,9 +2037,17 @@
                                 "description": "Open raycast://extensions/thomas/visual-studio-code/index",
                                 "from": {
                                     "key_code": "c",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open raycast://extensions/thomas/visual-studio-code/index" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open raycast://extensions/thomas/visual-studio-code/index"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -1963,12 +2181,19 @@
                                 "description": "AI Chat",
                                 "from": {
                                     "key_code": "a",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "a",
-                                        "modifiers": ["left_shift", "left_control"]
+                                        "modifiers": [
+                                            "left_shift",
+                                            "left_control"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -2104,9 +2329,17 @@
                                 "description": "Apple Shortcut: Create Reminder",
                                 "from": {
                                     "key_code": "comma",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "shortcuts run \"Create Reminder\"" }],
+                                "to": [
+                                    {
+                                        "shell_command": "shortcuts run \"Create Reminder\""
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -2235,7 +2468,11 @@
                                 "description": "Toggle Hyper sublayer w",
                                 "from": {
                                     "key_code": "w",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -2266,12 +2503,18 @@
                                 "description": "Window: Hide",
                                 "from": {
                                     "key_code": "semicolon",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "h",
-                                        "modifiers": ["right_command"]
+                                        "modifiers": [
+                                            "right_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -2287,12 +2530,19 @@
                                 "description": "Window: Previous Tab",
                                 "from": {
                                     "key_code": "u",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "tab",
-                                        "modifiers": ["right_control", "right_shift"]
+                                        "modifiers": [
+                                            "right_control",
+                                            "right_shift"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -2308,12 +2558,18 @@
                                 "description": "Window: Next Tab",
                                 "from": {
                                     "key_code": "i",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "tab",
-                                        "modifiers": ["right_control"]
+                                        "modifiers": [
+                                            "right_control"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -2329,9 +2585,17 @@
                                 "description": "Increase Window Size Left",
                                 "from": {
                                     "key_code": "h",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "aerospace resize width +10" }],
+                                "to": [
+                                    {
+                                        "shell_command": "aerospace resize width +10"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -2345,12 +2609,18 @@
                                 "description": "Window: Back",
                                 "from": {
                                     "key_code": "b",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "left_arrow",
-                                        "modifiers": ["right_command"]
+                                        "modifiers": [
+                                            "right_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -2366,12 +2636,18 @@
                                 "description": "Window: Forward",
                                 "from": {
                                     "key_code": "f",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "right_arrow",
-                                        "modifiers": ["right_command"]
+                                        "modifiers": [
+                                            "right_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -2502,7 +2778,11 @@
                                 "description": "Toggle Hyper sublayer s",
                                 "from": {
                                     "key_code": "s",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -2533,9 +2813,17 @@
                                 "description": "Search Emoji & Symbols",
                                 "from": {
                                     "key_code": "e",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open raycast://extensions/raycast/emoji-symbols/search-emoji-symbols" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -2549,9 +2837,17 @@
                                 "description": "Volume Up",
                                 "from": {
                                     "key_code": "u",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "key_code": "volume_increment" }],
+                                "to": [
+                                    {
+                                        "key_code": "volume_increment"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -2565,9 +2861,17 @@
                                 "description": "Volume Down",
                                 "from": {
                                     "key_code": "j",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "key_code": "volume_decrement" }],
+                                "to": [
+                                    {
+                                        "key_code": "volume_decrement"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -2581,9 +2885,17 @@
                                 "description": "Mute Volume",
                                 "from": {
                                     "key_code": "i",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "key_code": "display_brightness_increment" }],
+                                "to": [
+                                    {
+                                        "key_code": "display_brightness_increment"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -2597,9 +2909,17 @@
                                 "description": "Decrease Brightness",
                                 "from": {
                                     "key_code": "k",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "key_code": "display_brightness_decrement" }],
+                                "to": [
+                                    {
+                                        "key_code": "display_brightness_decrement"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -2613,12 +2933,19 @@
                                 "description": "Lock Screen",
                                 "from": {
                                     "key_code": "l",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "q",
-                                        "modifiers": ["right_control", "right_command"]
+                                        "modifiers": [
+                                            "right_control",
+                                            "right_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -2634,9 +2961,17 @@
                                 "description": "Play/Pause Music",
                                 "from": {
                                     "key_code": "p",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "key_code": "play_or_pause" }],
+                                "to": [
+                                    {
+                                        "key_code": "play_or_pause"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -2650,9 +2985,17 @@
                                 "description": "Mute Microphone",
                                 "from": {
                                     "key_code": "semicolon",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "key_code": "fastforward" }],
+                                "to": [
+                                    {
+                                        "key_code": "fastforward"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -2666,9 +3009,17 @@
                                 "description": "Do Not Disturb Toggle",
                                 "from": {
                                     "key_code": "d",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open raycast://extensions/yakitrak/do-not-disturb/toggle?launchType=background" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open raycast://extensions/yakitrak/do-not-disturb/toggle?launchType=background"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -2682,9 +3033,17 @@
                                 "description": "Toggle System Appearance",
                                 "from": {
                                     "key_code": "t",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open raycast://extensions/raycast/system/toggle-system-appearance" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open raycast://extensions/raycast/system/toggle-system-appearance"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -2698,9 +3057,17 @@
                                 "description": "Open Camera",
                                 "from": {
                                     "key_code": "c",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open raycast://extensions/raycast/system/open-camera" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open raycast://extensions/raycast/system/open-camera"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -2834,9 +3201,17 @@
                                 "description": "Open raycast://extensions/hugo/latex-ocr/extract-markdown",
                                 "from": {
                                     "key_code": "v",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
-                                "to": [{ "shell_command": "open raycast://extensions/hugo/latex-ocr/extract-markdown" }],
+                                "to": [
+                                    {
+                                        "shell_command": "open raycast://extensions/hugo/latex-ocr/extract-markdown"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -2965,7 +3340,11 @@
                                 "description": "Toggle Hyper sublayer c",
                                 "from": {
                                     "key_code": "c",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -2995,12 +3374,19 @@
                                 ],
                                 "from": {
                                     "key_code": "y",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "7",
-                                        "modifiers": ["shift", "left_alt"]
+                                        "modifiers": [
+                                            "shift",
+                                            "left_alt"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -3015,12 +3401,19 @@
                                 ],
                                 "from": {
                                     "key_code": "u",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "8",
-                                        "modifiers": ["shift", "right_alt"]
+                                        "modifiers": [
+                                            "shift",
+                                            "right_alt"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -3035,12 +3428,19 @@
                                 ],
                                 "from": {
                                     "key_code": "i",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "9",
-                                        "modifiers": ["shift", "right_alt"]
+                                        "modifiers": [
+                                            "shift",
+                                            "right_alt"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -3048,10 +3448,15 @@
                         ]
                     },
                     {
-                        "description": "Hyper Key sublayer \"r\"",
+                        "description": "Hyper Key + r",
                         "manipulators": [
                             {
                                 "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
                                     {
                                         "name": "hyper_sublayer_1",
                                         "type": "variable_if",
@@ -3138,6 +3543,11 @@
                                         "value": 0
                                     },
                                     {
+                                        "name": "hyper_sublayer_r",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
                                         "name": "hyper_sublayer_n",
                                         "type": "variable_if",
                                         "value": 0
@@ -3161,194 +3571,24 @@
                                         "name": "hyper_sublayer_f",
                                         "type": "variable_if",
                                         "value": 0
-                                    },
-                                    {
-                                        "name": "hyper",
-                                        "type": "variable_if",
-                                        "value": 1
                                     }
                                 ],
-                                "description": "Toggle Hyper sublayer r",
                                 "from": {
                                     "key_code": "r",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "hyper_sublayer_r",
-                                            "value": 1
-                                        }
+                                        "key_code": "r",
+                                        "modifiers": [
+                                            "left_control"
+                                        ]
                                     }
                                 ],
-                                "to_after_key_up": [
-                                    {
-                                        "set_variable": {
-                                            "name": "hyper_sublayer_r",
-                                            "value": 0
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_r",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1",
-                                "from": {
-                                    "key_code": "1",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_r",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2",
-                                "from": {
-                                    "key_code": "2",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_r",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open raycast://extensions/thomas/color-picker/pick-color",
-                                "from": {
-                                    "key_code": "c",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open raycast://extensions/thomas/color-picker/pick-color" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_r",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open raycast://script-commands/dismiss-notifications",
-                                "from": {
-                                    "key_code": "n",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open raycast://script-commands/dismiss-notifications" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_r",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink",
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_r",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open raycast://extensions/raycast/emoji-symbols/search-emoji-symbols",
-                                "from": {
-                                    "key_code": "e",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open raycast://extensions/raycast/emoji-symbols/search-emoji-symbols" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_r",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open raycast://extensions/raycast/raycast/confetti",
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open raycast://extensions/raycast/raycast/confetti" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_r",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open raycast://extensions/raycast/raycast-ai/ai-chat",
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open raycast://extensions/raycast/raycast-ai/ai-chat" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_r",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open raycast://extensions/peduarte/silent-mention/index",
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open raycast://extensions/peduarte/silent-mention/index" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_r",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open raycast://extensions/Alex_/http-status-codes/index",
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open raycast://extensions/Alex_/http-status-codes/index" }],
                                 "type": "basic"
                             }
                         ]
@@ -3482,12 +3722,21 @@
                                 "description": "Propegate",
                                 "from": {
                                     "key_code": "n",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "n",
-                                        "modifiers": ["left_control", "left_option", "left_shift", "left_command"]
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option",
+                                            "left_shift",
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -3623,12 +3872,21 @@
                                 "description": "Propegate",
                                 "from": {
                                     "key_code": "quote",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "quote",
-                                        "modifiers": ["left_control", "left_option", "left_shift", "left_command"]
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option",
+                                            "left_shift",
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -3764,12 +4022,21 @@
                                 "description": "Propegate",
                                 "from": {
                                     "key_code": "x",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "x",
-                                        "modifiers": ["left_control", "left_option", "left_shift", "left_command"]
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option",
+                                            "left_shift",
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -3905,12 +4172,21 @@
                                 "description": "Propegate",
                                 "from": {
                                     "key_code": "t",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "t",
-                                        "modifiers": ["left_control", "left_option", "left_shift", "left_command"]
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option",
+                                            "left_shift",
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -4046,12 +4322,21 @@
                                 "description": "Propegate",
                                 "from": {
                                     "key_code": "f",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
                                         "key_code": "f",
-                                        "modifiers": ["left_control", "left_option", "left_shift", "left_command"]
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option",
+                                            "left_shift",
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -4060,9 +4345,25 @@
                     }
                 ]
             },
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 545,
+                        "vendor_id": 13364
+                    },
+                    "ignore": false,
+                    "treat_as_built_in_keyboard": true
+                }
+            ],
             "name": "Default",
-            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+            "virtual_hid_keyboard": {
+                "keyboard_type_v2": "ansi"
+            }
         }
     ],
-    "virtual_hid_keyboard": { "keyboard_type_v2": "ansii" }
+    "virtual_hid_keyboard": {
+        "keyboard_type_v2": "ansi"
+    }
 }

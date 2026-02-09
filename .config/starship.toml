@@ -216,7 +216,7 @@ disabled=true
 disabled=true
 
 [time]
-disabled=true
+disabled=false
 
 [username]
 disabled=true
