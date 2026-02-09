@@ -9,23 +9,32 @@
 
   outputs = { self, nix-darwin, nixpkgs }:
     let
-      configuration = { pkgs, ... }: {
-        system.configurationRevision = self.rev or self.dirtyRev or null;
+      system = "aarch64-darwin";
+      pkgs = import nixpkgs { inherit system; };
+
+      # Shared configuration for all machines
+      sharedModules = [
+        ({ ... }: {
+          system.configurationRevision = self.rev or self.dirtyRev or null;
+        })
+        ./nix-darwin
+      ];
+
+      # Helper to create a darwin system
+      mkDarwinHost = hostname: extraModules: nix-darwin.lib.darwinSystem {
+        inherit system pkgs;
+        modules = sharedModules ++ extraModules;
       };
     in {
-      # Build darwin flake using:
-      # $ darwin-rebuild build --flake .#Hugos-MacBook-Pro
-      darwinConfigurations."Hugos-MacBook-Pro" = nix-darwin.lib.darwinSystem {
-        system = "aarch64-darwin";
-        pkgs = import nixpkgs { system = "aarch64-darwin"; };
-        modules = [
+      darwinConfigurations = {
+        # Personal MacBook Pro
+        "Hugos-MacBook-Pro" = mkDarwinHost "Hugos-MacBook-Pro" [];
 
-          configuration
-
-          ./nix-darwin
-        ];
+        # Work laptop (neo4j)
+        "Hugos-macbook-neo4j" = mkDarwinHost "Hugos-macbook-neo4j" [];
       };
-      # Expose the package set, including overlays, for convenience.
+
+      # Expose the package set for convenience
       darwinPackages = self.darwinConfigurations."Hugos-MacBook-Pro".pkgs;
     };
 }

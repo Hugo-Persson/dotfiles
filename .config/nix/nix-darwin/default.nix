@@ -44,7 +44,7 @@
   system.defaults.NSGlobalDomain.AppleEnableMouseSwipeNavigateWithScrolls=true;
   system.defaults.NSGlobalDomain."com.apple.keyboard.fnState" = true;
    # 120, 90, 60, 30, 12, 6, 2
-  system.defaults.NSGlobalDomain.InitialKeyRepeat = 10;
+  system.defaults.NSGlobalDomain.InitialKeyRepeat = 30;
   # 120, 90, 60, 30, 12, 6, 2, 1
   system.defaults.NSGlobalDomain.KeyRepeat = 1;
   system.defaults.finder.ShowPathbar = true;
