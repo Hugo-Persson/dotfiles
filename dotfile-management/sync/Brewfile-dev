@@ -93,6 +93,7 @@ brew "swift-format"
 brew "swiftformat"
 brew "swiftlint"
 brew "tabiew"
+brew "tex-fmt"
 brew "thefuck"
 brew "tldr"
 brew "tmux"
@@ -149,6 +150,7 @@ cask "keyboard-cleaner"
 cask "kopiaui"
 cask "linear-linear"
 cask "logi-options+"
+cask "mactex"
 cask "middleclick"
 cask "mos"
 cask "mqttx"
@@ -182,8 +184,6 @@ mas "Command X", id: 6448461551
 mas "Folder Preview", id: 6698876601
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft Word", id: 462054704
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "TestFlight", id: 899247664
 mas "Unsplash Wallpapers", id: 1284863847
 mas "WireGuard", id: 1451685025
