@@ -55,4 +55,8 @@ function GetColorScheme()
   end
 end
 
+vim.g.vimtex_mappings_prefix = "<leader>l"
 vim.g.copilot_nes = true
+-- In lua/config/options.lua
+vim.opt.breakindent = true
+vim.opt.showbreak = "↪ " -- You can use ">> " or any symbol you like

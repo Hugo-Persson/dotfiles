@@ -88,3 +88,6 @@ vim.api.nvim_create_user_command("RunTSCQuickfix", function()
 end, {})
 
 vim.o.clipboard = "unnamedplus"
+
+vim.g.vimtex_view_method = "zathura"
+vim.g.vimtex_compiler_method = "latexmk"

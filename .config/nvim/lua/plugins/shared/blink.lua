@@ -58,7 +58,7 @@ return {
             module = "cmp-pandoc-references.blink",
             score_offset = 2,
           },
-          latex_symbols = { name = "latex_symbols", opts = { strategy = 2 }, module = "blink.compat.source" },
+          latex_symbols = { name = "latex_symbols", opts = { strategy = 2 }, module = "blink.compat.source", score_offset = -15 },
         },
       },
       -- cmdline = {
