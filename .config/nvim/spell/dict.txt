@@ -5,6 +5,7 @@ CSV
 Cost-effectiveness
 Dockerfile
 Grafana
+HUGO
 HomeBrew
 HomeLab
 HugoFlix

@@ -24,6 +24,8 @@
 --       "Toggle floating term",
 --     },
 
+vim.keymap.del("n", "<leader>l")
+
 local map = vim.keymap.set
 
 map("n", "<C-l>", "<cmd> TmuxNavigateRight<CR>", { noremap = true, silent = true, desc = "Window right" })

@@ -9,9 +9,37 @@ return {
         pyright = {},
         --fish_lsp = {},
         docker_compose_language_service = {},
+        texlab = {},
         harper_ls = {
+          filetypes = {
+            "c",
+            "cpp",
+            "cs",
+            "gitcommit",
+            "go",
+            "html",
+            "java",
+            "javascript",
+            "lua",
+            "markdown",
+            "nix",
+            "python",
+            "ruby",
+            "rust",
+            "swift",
+            "toml",
+            "typescript",
+            "typescriptreact",
+            "haskell",
+            "cmake",
+            "typst",
+            "php",
+            "dart",
+            "clojure",
+            "tex",
+          },
           settings = {
-            ["harper-ls"] = { -- https://github.com/elijah-potter/harper/blob/master/harper-ls/README.md
+            ["harper-ls"] = {
               userDictPath = "~/.config/nvim/spell/dict.txt",
               linters = {
                 desktop = true,

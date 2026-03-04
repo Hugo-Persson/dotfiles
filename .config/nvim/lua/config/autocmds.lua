@@ -13,6 +13,23 @@ vim.api.nvim_create_autocmd("FileType", {
     require("config.markdown-keymaps")()
   end,
 })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "tex", "latex", "markdown" },
+  callback = function()
+    vim.opt_local.wrap = true -- Enable wrapping
+    vim.opt_local.linebreak = true -- Don't break words in the middle
+    vim.opt_local.spell = false -- Using harper_ls for spellchecking instead
+    vim.opt_local.conceallevel = 2 -- Hides LaTeX code (like \textbf) to show just the text
+  end,
+})
+vim.api.nvim_create_autocmd("FileType", {
+  desc = "LaTeX keymaps",
+  group = augroup("latex"),
+  pattern = { "tex", "latex" },
+  callback = function()
+    require("config.latex-keymaps")()
+  end,
+})
 
 vim.api.nvim_create_autocmd("User", {
   pattern = { "XcodebuildBuildFinished", "XcodebuildTestsFinished" },
@@ -38,11 +55,13 @@ vim.api.nvim_create_autocmd("User", {
 -- Optimize performance for large files
 local function optimize_for_large_files()
   local file_path = vim.api.nvim_buf_get_name(0)
-  if file_path == "" then return end
-  
+  if file_path == "" then
+    return
+  end
+
   local file_size = vim.fn.getfsize(file_path)
   local max_size = 1024 * 1024 -- 1MB threshold
-  
+
   if file_size > max_size then
     -- Disable heavy features for large files
     vim.opt_local.syntax = "off"
@@ -53,10 +72,10 @@ local function optimize_for_large_files()
     vim.opt_local.cursorline = false
     vim.opt_local.cursorcolumn = false
     vim.opt_local.relativenumber = false
-    
+
     -- Disable LSP for large files
     vim.cmd("LspStop")
-    
+
     -- Disable treesitter for large files
     local ok, treesitter = pcall(require, "nvim-treesitter.configs")
     if ok then
@@ -64,13 +83,16 @@ local function optimize_for_large_files()
       vim.cmd("TSBufDisable indent")
       vim.cmd("TSBufDisable incremental_selection")
     end
-    
+
     -- Show notification
-    vim.notify("Large file detected (" .. math.floor(file_size / 1024) .. "KB). Performance optimizations applied.", vim.log.levels.INFO)
+    vim.notify(
+      "Large file detected (" .. math.floor(file_size / 1024) .. "KB). Performance optimizations applied.",
+      vim.log.levels.INFO
+    )
   end
 end
 
-vim.api.nvim_create_autocmd({"BufReadPre", "FileReadPre"}, {
+vim.api.nvim_create_autocmd({ "BufReadPre", "FileReadPre" }, {
   group = augroup("large_file_optimizations"),
   callback = optimize_for_large_files,
 })
@@ -78,17 +100,17 @@ vim.api.nvim_create_autocmd({"BufReadPre", "FileReadPre"}, {
 -- Special handling for JSON files
 vim.api.nvim_create_autocmd("FileType", {
   group = augroup("json_optimizations"),
-  pattern = {"json", "jsonc"},
+  pattern = { "json", "jsonc" },
   callback = function()
     local file_size = vim.fn.getfsize(vim.api.nvim_buf_get_name(0))
     local max_json_size = 512 * 1024 -- 512KB for JSON files
-    
+
     if file_size > max_json_size then
       -- Additional JSON-specific optimizations
       vim.opt_local.conceallevel = 0
       vim.opt_local.concealcursor = ""
       vim.opt_local.foldlevel = 999 -- Don't fold by default
-      
+
       -- Disable completion for large JSON files
       if vim.fn.exists(":BlinkDisable") == 2 then
         vim.cmd("BlinkDisable")

@@ -112,11 +112,6 @@ function getSpec()
     table.insert(s, item)
   end
 
-  -- Load main plugins directory with optimization patterns
-  table.insert(s, {
-    { import = "plugins", priority = 50 },
-    { import = "plugins.dev", priority = 40 },
-  })
 
   -- Debug: Write to a file
   -- local file = io.open(vim.fn.stdpath("cache") .. "/lazy_spec_debug.lua", "w")
