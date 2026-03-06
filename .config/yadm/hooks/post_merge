@@ -23,7 +23,7 @@ function main() {
  */
 function sync_editor(command, list_file) {
   console.log(`📋 ${command.toUpperCase()}:`);
-  const list_file_path = path.join(__dirname, list_file);
+  const list_file_path = path.join(os.homedir(), list_file);
   const command_path = get_command_path(command);
 
   if (!fs.existsSync(list_file_path)) {
