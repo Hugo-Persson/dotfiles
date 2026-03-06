@@ -57,7 +57,7 @@ function sync_editor(command, list_file) {
  * @returns {"pull-from-list" | "push-to-list"} - Action to take
  */
 function determine_sync_direction(editor, list_file_path) {
-  return "push-to-list"
+  return "pull-from-list"
   const extension_timestamp = get_extension_timestamp(editor);
   const list_timestamp = get_list_file_timestamp(list_file_path);
 
@@ -172,7 +172,7 @@ function uninstall_extensions(command_path, extensions) {
     return;
   }
   execSync(
-    `${command_path} ${extensions.map((ext) => `--uninstall_extension ${ext}`).join(" ")}`,
+    `${command_path} ${extensions.map((ext) => `--uninstall-extension ${ext}`).join(" ")}`,
     {
       stdio: "inherit",
     },
