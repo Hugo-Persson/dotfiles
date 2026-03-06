@@ -1,0 +1,124 @@
+{
+	"editor.accessibilitySupport": "off",
+	"terminal.integrated.env.osx": {
+		"CW_NEW_SESSION": "1"
+	},
+	"workbench.colorTheme": "Catppuccin Mocha",
+	"workbench.iconTheme": "catppuccin-latte",
+	"makefile.configureOnOpen": true,
+	"lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+	"lldb.launch.expressions": "native",
+	"git.confirmSync": false,
+	"window.autoDetectColorScheme": true,
+	"workbench.preferredLightColorTheme": "Catppuccin Latte",
+	"workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+	"explorer.confirmDragAndDrop": false,
+	"explorer.confirmDelete": false,
+	"vim.enableNeovim": true,
+	"redhat.telemetry.enabled": true,
+	"diffEditor.hideUnchangedRegions.enabled": true,
+	"python.analysis.typeCheckingMode": "strict",
+	"i18n-ally.enabledFrameworks": ["react"],
+	"i18n-ally.extract.autoDetect": true,
+	"i18n-ally.parserOptions": {},
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.formatOnSave": true,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"vim.easymotion": true,
+	"vscode-neovim.NVIM_APPNAME": "NVIM_VSCODE",
+	"javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+	"typescript.inlayHints.variableTypes.enabled": true,
+	"typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+	"typescript.inlayHints.parameterTypes.enabled": true,
+	"typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+	"editor.hover.enabled": "on",
+	"editor.hover.sticky": true,
+	"typescript.experimental.expandableHover": true,
+	"[prisma]": {
+		"editor.defaultFormatter": "Prisma.prisma"
+	},
+	"[javascript][typescript][javascriptreact][typescriptreact][json][jsonc][css][graphql]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"inlineChat.enableV2": true,
+	"chat.tools.terminal.autoApprove": {
+		"pnpm": true,
+		"/usr/local/bin/pnpm": true
+	},
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"typescript.tsserver.log": "off",
+	"dart.flutterSdkPath": "/Users/hugo/combain/viapath-app/flutter",
+	"docker.extension.enableComposeLanguageServer": false,
+	"cSpell.userWords": [
+		"Autherrorper",
+		"avgs",
+		"barchart",
+		"cooldown",
+		"dberrorper",
+		"Dyskentic",
+		"Dyskinetic",
+		"healthkit",
+		"healtkit",
+		"INBED",
+		"luxon",
+		"Millis",
+		"orpc",
+		"Pressable",
+		"sinemonitoring",
+		"superadmin",
+		"Syncer",
+		"teammembers"
+	],
+	"git.enableSmartCommit": true,
+	"[java]": {
+		"editor.defaultFormatter": "Oracle.oracle-java"
+	},
+	"files.watcherExclude": {
+		"**/.bloop": true,
+		"**/.metals": true
+	},
+	"[scala]": {
+		"editor.defaultFormatter": "scalameta.metals"
+	},
+	"python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+	"githubPullRequests.pullBranch": "never",
+	"gitlens.graph.layout": "editor",
+	"gitlens.ai.model": "vscode",
+	"gitlens.ai.vscode.model": "copilot:gpt-5-mini",
+	"git.openRepositoryInParentFolders": "always",
+	"[yaml]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+	"editor.fontFamily": "'Monaspace Neon NF', monospace",
+	"editor.inlineSuggest.fontFamily": "'Monaspace Krypton NF', monospace",
+	"terminal.integrated.fontFamily": "'Monaspace Neon', monospace",
+	"terminal.integrated.fontLigatures.enabled": true,
+	"editor.fontLigatures": true,
+	"github.copilot.nextEditSuggestions.enabled": true,
+	"[c]": {
+		"editor.defaultFormatter": "ms-vscode.cpptools"
+	},
+	"[rust]": {
+		"editor.defaultFormatter": "rust-lang.rust-analyzer"
+	},
+	"github.copilot.enable": {
+		"*": true,
+		"plaintext": false,
+		"markdown": false,
+		"scminput": false,
+		"rust": true,
+		"jrag": false
+	},
+	"claudeCode.useTerminal": true,
+	"claudeCode.preferredLocation": "panel",
+	"cursor.cpp.disabledLanguages": [
+		"plaintext",
+		"markdown",
+		"scminput",
+		"jrag"
+	],
+	"jdk.telemetry.enabled": true,
+	"extensions.experimental.affinity": {
+		"asvetliakov.vscode-neovim": 1
+	}
+}
