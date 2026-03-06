@@ -1,4 +1,4 @@
-set -Ux HOMEBREW_BUNDLE_DUMP_NO_VSCODE 1
+
 function brew
     # Execute the original brew command
     command brew $argv

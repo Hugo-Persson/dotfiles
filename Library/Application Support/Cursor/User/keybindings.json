@@ -1,0 +1,138 @@
+// Place your key bindings in this file to override the defaults
+[
+	{
+		"key": "ctrl+j",
+		"command": "cursorDown",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "-cursorDown",
+		"when": "textInputFocus"
+	},
+	// {
+	// 	"key": "tab",
+	// 	"command": "-tab",
+	// 	"when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+	// },
+	// {
+	// 	"key": "tab",
+	// 	"command": "selectNextSuggestion",
+	// 	"when": "suggestWidgetVisible && textInputFocus"
+	// },
+	// // Shift+Tab: previous suggestion
+	// {
+	// 	"key": "shift+tab",
+	// 	"command": "selectPrevSuggestion",
+	// 	"when": "suggestWidgetVisible && textInputFocus"
+	// },
+	// // Enter: accept suggestion
+	// {
+	// 	"key": "enter",
+	// 	"command": "acceptSelectedSuggestion",
+	// 	"when": "suggestWidgetVisible && textInputFocus"
+	// },
+	// // Tab: normal tab when no suggestion menu
+	// {
+	// 	"key": "tab",
+	// 	"command": "tab",
+	// 	"when": "!suggestWidgetVisible && editorTextFocus"
+	// },
+	// {
+	// 	"key": "tab",
+	// 	"command": "selectNextSuggestion",
+	// 	"when": "suggestWidgetVisible && textInputFocus"
+	// },
+	// // Shift+Tab: previous suggestion
+	// {
+	// 	"key": "shift+tab",
+	// 	"command": "selectPrevSuggestion",
+	// 	"when": "suggestWidgetVisible && textInputFocus"
+	// },
+	// // Enter: accept suggestion
+	// {
+	// 	"key": "enter",
+	// 	"command": "acceptSelectedSuggestion",
+	// 	"when": "suggestWidgetVisible && textInputFocus"
+	// },
+	// // Tab: normal tab when no suggestion menu
+	// {
+	// 	"key": "tab",
+	// 	"command": "tab",
+	// 	"when": "!suggestWidgetVisible && editorTextFocus"
+	// },
+
+	// Copilot: accept full suggestion with Alt+Enter
+	// {
+	// 	"key": "alt+enter",
+	// 	"command": "editor.action.inlineSuggest.commit",
+	// 	"when": "inlineSuggestionVisible && textInputFocus"
+	// },
+
+	// Copilot: accept next word with Alt+RightArrow
+	{
+		"key": "alt+right",
+		"command": "editor.action.inlineSuggest.acceptNextWord",
+		"when": "inlineSuggestionVisible && textInputFocus"
+	},
+
+	// // Remove default Shift+Tab outdent
+	// {
+	// 	"key": "shift+tab",
+	// 	"command": "-editor.action.outdentLines"
+	// },
+	// {
+	// 	"key": "shift+tab",
+	// 	"command": "-editor.action.outdentLines"
+	// },
+	// Quick Open navigation
+	{
+		"key": "tab",
+		"command": "workbench.action.quickOpenSelectNext",
+		"when": "inQuickOpen"
+	},
+	{
+		"key": "shift+tab",
+		"command": "workbench.action.quickOpenSelectPrevious",
+		"when": "inQuickOpen"
+	},
+	{
+		"key": "shift+cmd+a",
+		"command": "editor.action.blockComment",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "shift+alt+a",
+		"command": "-editor.action.blockComment",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "cmd+l",
+		"command": "workbench.action.gotoLine"
+	},
+	{
+		"key": "ctrl+g",
+		"command": "-workbench.action.gotoLine"
+	},
+	{
+		"key": "ctrl+shift+p",
+		"command": "git.push"
+	},
+	{
+		"key": "alt+tab",
+		"command": "workbench.action.showPreviousWindowTab"
+	},
+	{
+		"key": "shift+cmd+a",
+		"command": "-notification.acceptPrimaryAction",
+		"when": "notificationToastsVisible"
+	},
+	{
+		"key": "shift+enter",
+		"command": "workbench.action.terminal.sendSequence",
+		"args": {
+			"text": "\\\r\n"
+		},
+		"when": "terminalFocus"
+	}
+]

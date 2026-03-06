@@ -2,12 +2,7 @@
   "permissions": {
     "allow": [
       "Read(//Users/hugo/.local/share/nvim/lazy/nvim-biscuits/**)",
-      "Read(//Users/hugo/.local/share/nvim/lazy/**)",
-      "WebFetch(domain:github.com)",
-      "WebFetch(domain:www.lazyvim.org)",
-      "Bash(find:*)",
-      "WebSearch",
-      "Bash(head:*)"
+      "Read(//Users/hugo/.local/share/nvim/lazy/**)"
     ],
     "deny": [],
     "ask": []
