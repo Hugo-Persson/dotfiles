@@ -24,16 +24,20 @@
 	"editor.defaultFormatter": "biomejs.biome",
 	"editor.formatOnSave": true,
 	"typescript.updateImportsOnFileMove.enabled": "always",
-	"vim.easymotion": true,
 	"vscode-neovim.NVIM_APPNAME": "NVIM_VSCODE",
 	"javascript.inlayHints.functionLikeReturnTypes.enabled": true,
 	"typescript.inlayHints.variableTypes.enabled": true,
 	"typescript.inlayHints.propertyDeclarationTypes.enabled": true,
 	"typescript.inlayHints.parameterTypes.enabled": true,
 	"typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+
+	"typescript.tsserver.maxTsServerMemory": 4096,
+	"typescript.disableAutomaticTypeAcquisition": true,
+	"typescript.tsserver.useSyntaxServer": "auto",
+	"typescript.tsserver.experimental.useVsCodeWatcher": true,
+
 	"editor.hover.enabled": "on",
 	"editor.hover.sticky": true,
-	"typescript.experimental.expandableHover": true,
 	"[prisma]": {
 		"editor.defaultFormatter": "Prisma.prisma"
 	},
@@ -111,12 +115,7 @@
 	},
 	"claudeCode.useTerminal": true,
 	"claudeCode.preferredLocation": "panel",
-	"cursor.cpp.disabledLanguages": [
-		"plaintext",
-		"markdown",
-		"scminput",
-		"jrag"
-	],
+	"cursor.cpp.disabledLanguages": ["plaintext", "markdown", "scminput", "jrag"],
 	"jdk.telemetry.enabled": true,
 	"extensions.experimental.affinity": {
 		"asvetliakov.vscode-neovim": 1

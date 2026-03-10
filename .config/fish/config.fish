@@ -15,3 +15,6 @@ source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 
 # SDKMAN (handled by reitzig/sdkman-for-fish plugin)
 set -gx SDKMAN_DIR $HOME/.sdkman
+
+# Added by Antigravity
+fish_add_path /Users/hugo/.antigravity/antigravity/bin
