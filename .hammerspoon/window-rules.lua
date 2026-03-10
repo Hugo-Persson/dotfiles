@@ -30,10 +30,10 @@ local applied = {}
 -- Rules table: first match wins
 -- Title-specific rules should come before app-only rules for the same app
 local rules = {
-  -- Slack Huddle: floating + sized bottom-right
+  -- Slack Huddle: floating + centered
   {
     app_id = "com.tinyspeck.slackmacgap",
-      position = "",
+    title = "Huddle",
     action = {
       layout = "floating",
       size = { w = 400, h = 600 },
