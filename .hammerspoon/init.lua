@@ -9,6 +9,7 @@ require("weather")
 require("bluetooth")
 require("keymap")
 require("sleep_watcher")
+require("window-rules")
 -- hs.notify.show({ "Hammerspoon", "Loaded",  "Ready to rock!! 🤘" })
 print("Config loaded")
 
