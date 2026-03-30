@@ -18,3 +18,4 @@ set -gx SDKMAN_DIR $HOME/.sdkman
 
 # Added by Antigravity
 fish_add_path /Users/hugo/.antigravity/antigravity/bin
+tv init fish | source # Add to config.fish

@@ -1,22 +1,11 @@
 function cwa --description "Attach to git worktree and work on issue with claude code"
-    # Get worktree list and let user select with fzf
-    # Show full output in fzf for context, but we'll extract the path column
-    set -l selected (wtp list | fzf-tmux -p 55%,60% \
-        --border-label ' wtp ' \
-        --prompt '⚡  ' \
-        --header 'Select a worktree to attach' \
-        --no-sort)
+    # Select a worktree using television (outputs the full path via wtp channel)
+    set -l worktree_path (tv wtp)
 
     # If user cancelled (ESC), exit gracefully
-    if test -z "$selected"
+    if test -z "$worktree_path"
         return 0
     end
-
-    # Extract the branch name (second column) from the selected line
-    set -l branch_name (echo $selected | awk '{print $2}')
-
-    # Get the actual worktree path using wtp cd
-    set -l worktree_path (wtp cd $branch_name)
 
     # Verify the path exists
     if not test -d "$worktree_path"
