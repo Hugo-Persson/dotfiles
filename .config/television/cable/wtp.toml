@@ -1,0 +1,22 @@
+[metadata]
+name = "wtp"
+description = "Browse and attach to git worktrees"
+requirements = ["git"]
+
+[source]
+command = "git worktree list"
+output = "{0}"
+
+[preview]
+command = "cd '{0}' && printf '\\033[1m── Commits ahead of develop ──\\033[0m\\n'; git log --oneline --color=always develop..HEAD 2>/dev/null || echo '(none)'; echo; printf '\\033[1m── Unpushed changes ──\\033[0m\\n'; git log --oneline --color=always @{upstream}..HEAD 2>/dev/null || echo '(no upstream)'; echo; printf '\\033[1m── Working tree status ──\\033[0m\\n'; git -c color.status=always status --short"
+
+[ui]
+preview_panel = { size = 60 }
+
+[keybindings]
+ctrl-d = "actions:remove"
+
+[actions.remove]
+description = "Remove worktree"
+command = "wtp remove \"$(basename '{0}')\""
+mode = "fork"
