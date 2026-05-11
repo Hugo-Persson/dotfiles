@@ -68,7 +68,7 @@ let sublayers: SubLayerConfig = {
   },
   p: open("raycast://extensions/jomifepe/bitwarden/search"),
   g: open("raycast://extensions/jomifepe/bitwarden/generate-password"),
-  b: browserSubLayer,
+  b: app("Helium"),
   o: {
     b: app("Zen Browser"),
     d: app("Legcord"),

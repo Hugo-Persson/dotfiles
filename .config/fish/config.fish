@@ -2,6 +2,11 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+# Source all files in secrets/ directory (like conf.d/ but for sensitive config)
+for f in $__fish_config_dir/secrets/*.fish
+    source $f
+end
+
 export PATH="$PATH:$HOME/.local/bin"
 export DYLD_LIBRARY_PATH=/opt/homebrew/lib
 
