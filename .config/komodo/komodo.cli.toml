@@ -31,6 +31,8 @@ aliases = ["d"]  # Use `km -p d ...`
 #
 # Env: KOMODO_CLI_HOST > KOMODO_HOST
 host = "https://komodo.evercode.se"
+# Env: KOMODO_CLI_KEY
+# Env: KOMODO_CLI_SECRET
 #
 # Env: KOMODO_CLI_BACKUPS_FOLDER
 backups_folder = "/backups"

@@ -128,9 +128,11 @@ brew "satococoa/tap/wtp"
 brew "sdkman/tap/sdkman-cli"
 brew "tw93/tap/mole"
 cask "adobe-acrobat-pro"
+cask "antinote"
 cask "balenaetcher"
 cask "betterdisplay"
 cask "bitwarden"
+cask "claude"
 cask "claude-code"
 cask "clop"
 cask "codex"
@@ -188,18 +190,6 @@ cask "wezterm"
 cask "zed"
 cask "zoom"
 cask "zotero"
-mas "Bitwarden", id: 1352778147
-mas "Command X", id: 6448461551
-mas "Folder Preview", id: 6698876601
-mas "Microsoft Excel", id: 462058435
-mas "Microsoft PowerPoint", id: 462062816
-mas "Microsoft Word", id: 462054704
-mas "Numbers", id: 361304891
-mas "Numbers", id: 409203825
-mas "TestFlight", id: 899247664
-mas "Unsplash Wallpapers", id: 1284863847
-mas "WireGuard", id: 1451685025
-mas "Xcode", id: 497799835
 go "golang.org/x/mobile/cmd/gobind"
 go "golang.org/x/mobile/cmd/gomobile"
 go "github.com/magodo/pipeform"

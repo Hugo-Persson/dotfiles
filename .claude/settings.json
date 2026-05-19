@@ -1,21 +1,104 @@
 {
   "permissions": {
-    "deny": [
-      "Read(.env)",
-      "Read(**/.env*)",
-      "Read(**/.secret*)",
-      "Read(**/env*)",
-      "Read(**/*.pem)",
-      "Read(**/*.key)",
-      "Read(**/*.crt)",
-      "Read(**/*.cert)",
-      "Read(**/secrets/**)",
-      "Read(**/node_modules/**)",
-      "Read(**/credentials/**)"
-    ]
+    "deny": [],
+    "defaultMode": "auto"
   },
-  "model": "opus",
+  "model": "opus[1m]",
   "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/hugo/.claude/claude-notification.fish"
+          }
+        ]
+      },
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CLAUDE_ISLAND_SOCKET_PATH=\"/Users/hugo/.vibehub/ci.sock\" python3 ~/.claude/hooks/vibehub-state.py"
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CLAUDE_ISLAND_SOCKET_PATH=\"/Users/hugo/.vibehub/ci.sock\" python3 ~/.claude/hooks/vibehub-state.py",
+            "timeout": 86400
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CLAUDE_ISLAND_SOCKET_PATH=\"/Users/hugo/.vibehub/ci.sock\" python3 ~/.claude/hooks/vibehub-state.py"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "auto",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CLAUDE_ISLAND_SOCKET_PATH=\"/Users/hugo/.vibehub/ci.sock\" python3 ~/.claude/hooks/vibehub-state.py"
+          }
+        ]
+      },
+      {
+        "matcher": "manual",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CLAUDE_ISLAND_SOCKET_PATH=\"/Users/hugo/.vibehub/ci.sock\" python3 ~/.claude/hooks/vibehub-state.py"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CLAUDE_ISLAND_SOCKET_PATH=\"/Users/hugo/.vibehub/ci.sock\" python3 ~/.claude/hooks/vibehub-state.py"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CLAUDE_ISLAND_SOCKET_PATH=\"/Users/hugo/.vibehub/ci.sock\" python3 ~/.claude/hooks/vibehub-state.py"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CLAUDE_ISLAND_SOCKET_PATH=\"/Users/hugo/.vibehub/ci.sock\" python3 ~/.claude/hooks/vibehub-state.py"
+          }
+        ]
+      }
+    ],
     "Stop": [
       {
         "matcher": "",
@@ -25,15 +108,32 @@
             "command": "/Users/hugo/.claude/claude-notification.fish"
           }
         ]
-      }
-    ],
-    "Notification": [
+      },
       {
-        "matcher": "",
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/hugo/.claude/claude-notification.fish"
+            "command": "CLAUDE_ISLAND_SOCKET_PATH=\"/Users/hugo/.vibehub/ci.sock\" python3 ~/.claude/hooks/vibehub-state.py"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CLAUDE_ISLAND_SOCKET_PATH=\"/Users/hugo/.vibehub/ci.sock\" python3 ~/.claude/hooks/vibehub-state.py"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CLAUDE_ISLAND_SOCKET_PATH=\"/Users/hugo/.vibehub/ci.sock\" python3 ~/.claude/hooks/vibehub-state.py"
           }
         ]
       }
@@ -44,11 +144,23 @@
     "command": "pnpx  @owloops/claude-powerline@latest --style=powerline"
   },
   "enabledPlugins": {
-    "swift-lsp@claude-plugins-official": true,
     "commit-commands@claude-plugins-official": true,
-    "lua-lsp@claude-plugins-official": true
+    "lua-lsp@claude-plugins-official": true,
+    "swift-lsp@claude-plugins-official": true,
+    "vercel-plugin@vercel-vercel-plugin": true
+  },
+  "extraKnownMarketplaces": {
+    "vercel-vercel-plugin": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/hugo/.cache/plugins/github.com-vercel-vercel-plugin"
+      }
+    }
   },
   "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
   "skipDangerousModePermissionPrompt": true,
-  "effortLevel": "high"
+  "skipAutoPermissionPrompt": true,
+  "theme": "light",
+  "editorMode": "vim"
 }

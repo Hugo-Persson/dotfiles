@@ -3,7 +3,14 @@
     "allow": [
       "Bash(grep:*)",
       "Bash(chmod:*)",
-      "Bash(git worktree:*)"
+      "Bash(git worktree:*)",
+      "Bash(wtp --help)",
+      "Bash(gh api:*)",
+      "Read(//Users/hugo/nk/nordic-kinetics/**)",
+      "Bash(wtp list:*)",
+      "Bash(tv --version)",
+      "WebFetch(domain:alexpasmantier.github.io)",
+      "Bash(gh search:*)"
     ],
     "deny": [],
     "ask": []

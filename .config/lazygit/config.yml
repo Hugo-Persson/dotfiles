@@ -33,6 +33,11 @@ customCommands:
     command: koji
     context: files
     output: terminal
+  - key: <c-n>
+    description: "NK commit (conventional + AI draft)"
+    command: 'fish "$(git rev-parse --show-toplevel)/scripts/commit.fish"'
+    context: files
+    output: terminal
   - key: "<c-s>"
     description: "Accept their changes in merge conflict"
     command: "git checkout --theirs -- {{.SelectedFile.Name | quote}} "
