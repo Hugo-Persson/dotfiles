@@ -1,5 +1,4 @@
 abbr d dev
-abbr c claude
 abbr dc "docker compose"
 abbr dcd "docker compose down"
 abbr dcdv "docker compose down -v"

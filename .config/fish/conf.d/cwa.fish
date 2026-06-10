@@ -13,25 +13,15 @@ function cwa --description "Attach to git worktree and work on issue with claude
         return 1
     end
 
-    # Create session name from the worktree directory basename
-    # Replace any dots or special chars with underscores for tmux compatibility
-    set -l session_name (basename $worktree_path | string replace -a '.' '_')
+    # Create workspace label from the worktree directory basename
+    set -l workspace_label (basename $worktree_path | string replace -a '.' '_')
 
-    # Check if we're inside tmux
-    if set -q TMUX
-        # Switch to or create the session
-        if tmux has-session -t "$session_name" 2>/dev/null
-            tmux switch-client -t "$session_name"
-        else
-            tmux new-session -d -s "$session_name" -c "$worktree_path"
-            tmux switch-client -t "$session_name"
-        end
+    # Look for an existing herdr workspace with this label
+    set -l existing_id (herdr workspace list | python3 -c "import sys, json; ws = json.load(sys.stdin).get('result', {}).get('workspaces', []); print(next((str(w['number']) for w in ws if w.get('label') == '$workspace_label'), ''))")
+
+    if test -n "$existing_id"
+        herdr workspace focus "$existing_id"
     else
-        # Not in tmux, create or attach to session
-        if tmux has-session -t "$session_name" 2>/dev/null
-            tmux attach-session -t "$session_name"
-        else
-            tmux new-session -s "$session_name" -c "$worktree_path"
-        end
+        herdr workspace create --cwd "$worktree_path" --label "$workspace_label"
     end
 end

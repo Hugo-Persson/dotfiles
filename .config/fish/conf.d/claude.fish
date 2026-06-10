@@ -1,7 +1,3 @@
-function claude
+function c
     command claude --allow-dangerously-skip-permissions
-end
-
-function claude-c
-    command claude
 end

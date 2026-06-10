@@ -18,9 +18,13 @@ set --export PATH $BUN_INSTALL/bin $PATH
 # This won't be added again if you remove it.A
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 
-# SDKMAN (handled by reitzig/sdkman-for-fish plugin)
-set -gx SDKMAN_DIR $HOME/.sdkman
-
 # Added by Antigravity
 fish_add_path /Users/hugo/.antigravity/antigravity/bin
 tv init fish | source # Add to config.fish
+
+# pnpm
+set -gx PNPM_HOME "/Users/hugo/Library/pnpm"
+if not string match -q -- "$PNPM_HOME/bin" $PATH
+  set -gx PATH "$PNPM_HOME/bin" $PATH
+end
+# pnpm end
