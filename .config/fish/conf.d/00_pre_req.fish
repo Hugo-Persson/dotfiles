@@ -1,3 +1,10 @@
+# macOS /bin/bash lets an inherited UID from the environment override its own
+# builtin, so any exported UID != EUID makes `brew` abort with
+# "Running Homebrew with different real and effective UIDs is not supported."
+# Erase them if a parent process handed them down (e.g. a long-running herdr
+# server started before the old conf.d/env.fish exports were removed).
+set -e UID GID
+
 # Cache brew shellenv output to avoid repeated calls
 if not set -q _brew_shellenv_cached
     if test (uname) = Linux

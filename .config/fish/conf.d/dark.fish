@@ -43,6 +43,21 @@ function set_tmux_theme
 
     set -Ux TMUX_THEME "$(getTmuxTheme)"
 end
+
+function getBtopTheme
+    # Match the tmux dark flavor (macchiato), latte for light
+    if [ "$(isDarkMode)" -eq 1 ]
+        echo catppuccin_macchiato
+    else
+        echo catppuccin_latte
+    end
+end
+
+function evalBtopTheme
+    set -l conf "$HOME/.config/btop/btop.conf"
+    test -f "$conf"; or return
+    sed -i '' -E "s|^color_theme = .*|color_theme = \"$(getBtopTheme)\"|" "$conf"
+end
 function gum
     # Define Catppuccin theme colors
     if [ "$(isDarkMode)" -eq 1 ]
@@ -222,3 +237,4 @@ end
 # In config.fish
 
 evalTmuxTheme
+evalBtopTheme

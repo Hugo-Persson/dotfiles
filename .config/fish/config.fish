@@ -28,3 +28,8 @@ if not string match -q -- "$PNPM_HOME/bin" $PATH
   set -gx PATH "$PNPM_HOME/bin" $PATH
 end
 # pnpm end
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/hugo/.lmstudio/bin
+# End of LM Studio CLI section
+
